@@ -6,7 +6,7 @@ const Nav = () =>
 {
   return (
     <>
-      <div>
+      <div className='nav'>
         <ul>
           <li>
             <NavLink className={( navData ) => navData.isActive ? "active" : "not-active"} to="/">Home</NavLink>

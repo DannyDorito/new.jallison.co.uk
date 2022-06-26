@@ -1,4 +1,5 @@
-@use '../../index.scss';
+@use './_Variables' as v;
+@use './_Main.scss';
 
 div {
   display: flex;

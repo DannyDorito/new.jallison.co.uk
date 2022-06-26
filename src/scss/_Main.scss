@@ -1,0 +1,25 @@
+@use './_variables' as v;
+
+html {
+  font-family: v.$pallet-font, monospace;
+  font-size: v.$pallet-font-size;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+  overflow: overlay;
+  background-color: v.$pallet-background;
+  list-style-type: none;
+}
+
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+h1 {
+  text-align: center;
+}

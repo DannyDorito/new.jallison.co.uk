@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.scss';
 import RouterSetup from './pages/RouterSetup';
 import reportWebVitals from './reportWebVitals';
 
