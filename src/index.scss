@@ -1,13 +1,28 @@
+
+// colour pallet
+$pallet-main : #C1E2DC;
+$pallet-secondary: #7BC1B4;
+$pallet-tertiary: #9ED1C8;
+$pallet-highlight: #E2C1C4;
+$pallet-warning: #D19EA3;
+$pallet-font: #000;
+$pallet-background: light-grey;
+
+// fonts
+$pallet-font: 'Fira Code';
+$pallet-font-size: x-large;
+
 html {
-  font-family: 'Fira Code', monospace;
+  font-family: $pallet-font, monospace;
+  font-size: $pallet-font-size;
   margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   scroll-behavior: smooth;
   overflow: overlay;
+  background-color: $pallet-background;
+  list-style-type: none;
 }
 
 .no-select {
