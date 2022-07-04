@@ -5,7 +5,7 @@ import Home from './Home';
 import Nav from './Nav';
 import NotFound from './NotFound';
 import Projects from './Projects';
-import './scss/RouterSetup.scss';
+import '../scss/RouterSetup.scss';
 
 const RouterSetup = () =>
 {
