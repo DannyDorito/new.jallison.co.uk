@@ -1,15 +1,17 @@
-import { useState } from 'react';
+import { useQuery } from '@apollo/client';
+import { GET_GITHUB_BIO } from '../gql/GET_GITHUB_BIO';
+import { UserBase } from '../types/UserBase';
 import '../scss/Home.scss';
 
 const Home = () =>
 {
-  const [ twitter ] = useState( "https://twitter.com/JohnAllis0n" );
+  const {loading, error, data } = useQuery<UserBase>(GET_GITHUB_BIO);
+
   return (
     <>
       <div>
         <h1>John Allison</h1>
-        <h3>I code...</h3>
-        <h3>Add me on <a href={twitter}>Twitter</a></h3>
+        {loading || error?.message ? (<h3>...</h3>) : <h3>{data?.user?.bio}</h3>}
       </div>
     </>
   );

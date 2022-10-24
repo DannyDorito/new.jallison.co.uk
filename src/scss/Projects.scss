@@ -1,11 +1,6 @@
 @use './_Variables.scss' as v;
 @use './_Main.scss';
 
-div {
-  display: flex;
-  flex-direction: column;
-}
-
-h3 {
+p {
   text-align: center;
 }
