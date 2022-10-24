@@ -5,6 +5,7 @@ import Home from './Home';
 import Nav from './Nav';
 import NotFound from './NotFound';
 import Projects from './Projects';
+import Resume from './Resume';
 import '../scss/RouterSetup.scss';
 
 const RouterSetup = () =>
@@ -18,6 +19,7 @@ const RouterSetup = () =>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Projects />}/>
+          <Route path="/resume" element={<Resume />}/>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Fragment>
