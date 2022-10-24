@@ -1,59 +1,48 @@
-import React, { useEffect, useState } from 'react';
+import { gql, useQuery } from '@apollo/client';
+import { RepositoryOwner } from '../types/github-user';
+
+const GET_GITHUB_USER = gql`{
+  repositoryOwner (login: "DannyDorito") {
+    repositories(first: 100, isFork: false, privacy: PUBLIC) {
+      nodes {
+        name
+        url
+      }
+    }
+  }
+}`;
 
 function Projects ()
 {
-  const [ error, setError ] = useState( null );
-  const [ isLoaded, setIsLoaded ] = useState( false );
-  const [ items, setItems ] = useState( [] );
-
-  useEffect( () =>
-  {
-    fetch( "https://api.github.com/users/DannyDorito/repos" )
-      .then( response => response.json() )
-      .then(
-        ( result ) =>
-        {
-          setIsLoaded( true );
-          setItems( result );
-        },
-        ( error ) =>
-        {
-          setIsLoaded( true );
-          setError( error );
-        }
-      )
-  }, [] )
-
-  if ( error )
-  {
-    return (
-      <>
-        <div>
+    const {loading, error, data } = useQuery<RepositoryOwner>(GET_GITHUB_USER);
+    if ( error )
+    {
+      return (
+        <>
           Error: {error}
-        </div>
-      </>
-    );
-  } else if (!isLoaded) {
-    return (
-      <>
-        <div>
-          <h2>Loading..</h2>
-        </div>
-      </>
-    );
-  } else {
-    return (
-      <>
-        <ul>
-          {items.map(item => (
-            <li key={item}>
-              {item}
-            </li>
-          ))}
-        </ul>
-      </>
-    );
-  }
+        </>
+      );
+    } else if (loading) {
+      return (
+        <>
+          <div>
+            <h2>Loading..</h2>
+          </div>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <ul>
+            {data?.repositories?.nodes.map(item => (
+              <li key={item.name}>
+                {item.name}
+              </li>
+            ))}
+          </ul>
+        </>
+      );
+    }
 }
 
 export default Projects;
