@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import { Fragment } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Contact from './Contact';
 import Home from './Home';

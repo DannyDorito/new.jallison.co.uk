@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-
+import { useState } from 'react';
+import '../scss/Contact.scss';
 const Contact = () =>
 {
   const [ twitter ] = useState( "https://twitter.com/JohnAllis0n" );

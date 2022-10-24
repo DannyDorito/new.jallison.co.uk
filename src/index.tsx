@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import RouterSetup from './pages/RouterSetup';
+import Router from './pages/RouterSetup';
 import reportWebVitals from './reportWebVitals';
 import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink } from '@apollo/client';
 
@@ -26,7 +26,7 @@ const client = new ApolloClient({
 root.render(
   <ApolloProvider client={client}>
     <React.StrictMode>
-      <RouterSetup />
+      <Router />
     </React.StrictMode>
   </ApolloProvider>
 );

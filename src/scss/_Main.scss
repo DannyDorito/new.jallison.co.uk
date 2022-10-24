@@ -13,11 +13,17 @@ html {
   list-style-type: none;
 }
 
+a:link,
+a:visited,
+a:active {
+  color: v.$pallet-font;
+}
+
 .no-select {
-  user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  user-select: none;
 }
 
 h1 {
