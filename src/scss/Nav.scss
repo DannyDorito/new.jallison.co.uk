@@ -7,9 +7,16 @@ ul {
   flex-direction: row;
   align-content: center;
   align-items: center;
+  list-style-type: none;
+  width: 1;
 }
 
-.nav {
-  background-color: v.$pallet-main;
-  width: 1;
+a:link,
+a:visited,
+a:active {
+  color: v.$pallet-font;
+}
+
+div.nav {
+  flex: 0;
 }

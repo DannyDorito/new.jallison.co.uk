@@ -17,9 +17,7 @@ const Projects = () =>
       return (
         <>
         <h1>Projects</h1>
-          <div>
-            <h2>...</h2>
-          </div>
+        <h2>Loading...</h2>
         </>
       );
     } else {
@@ -27,9 +25,9 @@ const Projects = () =>
         <>
         <h1>Projects</h1>
           {data?.repositoryOwner?.repositories?.nodes?.map(item => (
-            <p key={item.name?.toString()}>
+            <a href={item.url?.toString()} key={item.name?.toString()}>
               {item.name?.toString()}
-            </p>
+            </a>
           ))}
         </>
       );

@@ -1,22 +1,17 @@
 @use './_Variables.scss' as v;
 
-html {
+html, body {
   font-family: v.$pallet-font, monospace;
   font-size: v.$pallet-font-size;
   margin: 0;
   box-sizing: border-box;
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
   scroll-behavior: smooth;
   overflow: overlay;
   background-color: v.$pallet-background;
   list-style-type: none;
-}
-
-a:link,
-a:visited,
-a:active {
-  color: v.$pallet-font;
 }
 
 .no-select {
@@ -28,4 +23,8 @@ a:active {
 
 h1 {
   text-align: center;
+}
+
+div {
+  flex: 1;
 }

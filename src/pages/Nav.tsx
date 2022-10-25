@@ -5,6 +5,7 @@ const Nav = () =>
 {
   return (
     <>
+      {/* Adding a route, also add to RouterSetup.tsx */}
       <div className='nav'>
         <ul>
           <li>
@@ -16,9 +17,9 @@ const Nav = () =>
           <li>
             <NavLink className={( navData ) => navData.isActive ? "active" : "not-active"} to="/projects">Projects</NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink className={( navData ) => navData.isActive ? "active" : "not-active"} to="/resume">Resume</NavLink>
-          </li>
+          </li> */}
         </ul>
       </div>
     </>

@@ -6,6 +6,7 @@ import Nav from './Nav';
 import NotFound from './NotFound';
 import Projects from './Projects';
 import Resume from './Resume';
+import Footer from '../components/Footer';
 import '../scss/RouterSetup.scss';
 
 const RouterSetup = () =>
@@ -23,6 +24,7 @@ const RouterSetup = () =>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Fragment>
+      <Footer />
     </Router>
   );
 }
