@@ -1,9 +1,5 @@
 const Resume = () => {
-  return (
-    <>
-      Resume
-    </>
-  );
+  return <>Resume</>;
 };
 
 export default Resume;

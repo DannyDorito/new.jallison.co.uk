@@ -1,18 +1,17 @@
 import { socialData } from '../types/SocialData';
 import '../scss/Contact.scss';
 
-const Contact = () =>
-{
+const Contact = () => {
   return (
     <>
       <h1>Contact me!</h1>
-      {socialData.map(social => (
+      {socialData.map((social) => (
         <a href={social.link} key={social.platform}>
           {social.platform}
-          </a>
+        </a>
       ))}
     </>
   );
-}
+};
 
 export default Contact;

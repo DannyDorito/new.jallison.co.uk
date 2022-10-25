@@ -1,6 +1,7 @@
 @use './_Variables.scss' as v;
 
-html, body {
+html,
+body {
   font-family: v.$pallet-font, monospace;
   font-size: v.$pallet-font-size;
   margin: 0;

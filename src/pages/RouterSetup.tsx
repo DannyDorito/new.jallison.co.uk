@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Contact from './Contact';
 import Home from './Home';
 import Nav from './Nav';
@@ -9,8 +9,7 @@ import Resume from './Resume';
 import Footer from '../components/Footer';
 import '../scss/RouterSetup.scss';
 
-const RouterSetup = () =>
-{
+const RouterSetup = () => {
   return (
     <Router>
       <Nav />
@@ -19,14 +18,14 @@ const RouterSetup = () =>
           {/* Adding a route, also add to Nav.tsx */}
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/projects" element={<Projects />}/>
-          <Route path="/resume" element={<Resume />}/>
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Fragment>
       <Footer />
     </Router>
   );
-}
+};
 
 export default RouterSetup;

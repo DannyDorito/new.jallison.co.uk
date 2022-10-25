@@ -1,5 +1,5 @@
 export interface RepositoryOwnerBase {
-  repositoryOwner?: RepositoryOwner
+  repositoryOwner?: RepositoryOwner;
 }
 
 interface RepositoryOwner {

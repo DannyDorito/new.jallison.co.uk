@@ -1,21 +1,41 @@
 import { NavLink } from 'react-router-dom';
 import '../scss/Nav.scss';
 
-const Nav = () =>
-{
+const Nav = () => {
   return (
     <>
       {/* Adding a route, also add to RouterSetup.tsx */}
-      <div className='nav'>
+      <div className="nav">
         <ul>
           <li>
-            <NavLink className={( navData ) => navData.isActive ? "active" : "not-active"} to="/">Home</NavLink>
+            <NavLink
+              className={(navData) =>
+                navData.isActive ? 'active' : 'not-active'
+              }
+              to="/"
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <NavLink className={( navData ) => navData.isActive ? "active" : "not-active"} to="/contact">Contact</NavLink>
+            <NavLink
+              className={(navData) =>
+                navData.isActive ? 'active' : 'not-active'
+              }
+              to="/contact"
+            >
+              Contact
+            </NavLink>
           </li>
           <li>
-            <NavLink className={( navData ) => navData.isActive ? "active" : "not-active"} to="/projects">Projects</NavLink>
+            <NavLink
+              className={(navData) =>
+                navData.isActive ? 'active' : 'not-active'
+              }
+              to="/projects"
+            >
+              Projects
+            </NavLink>
           </li>
           {/* <li>
             <NavLink className={( navData ) => navData.isActive ? "active" : "not-active"} to="/resume">Resume</NavLink>
@@ -24,6 +44,6 @@ const Nav = () =>
       </div>
     </>
   );
-}
+};
 
 export default Nav;
