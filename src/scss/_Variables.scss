@@ -1,12 +1,48 @@
 // colour pallet
-$pallet-main: #c1e2dc;
-$pallet-secondary: #7bc1b4;
-$pallet-tertiary: #9ed1c8;
-$pallet-highlight: #e2c1c4;
-$pallet-warning: #d19ea3;
-$pallet-font: #000;
-$pallet-background: $pallet-main;
+// $pallet-main: #c1e2dc;
+// $pallet-secondary: #7bc1b4;
+// $pallet-tertiary: #9ed1c8;
+// $pallet-highlight: #e2c1c4;
+// $pallet-warning: #d19ea3;
+// $pallet-background: $pallet-main;
+
+$pallet-white: #f8f8f8;
+$pallet-dark: #1f1f1f;
+
+$transition: all 250ms ease;
 
 // fonts
-$pallet-font: 'Fira Code';
+$pallet-font-style: 'Fira Code';
 $pallet-font-size: x-large;
+$pallet-font: #000;
+
+footer {
+  color: $pallet-dark;
+}
+
+.pallet-dark {
+  background-color: $pallet-dark;
+  color: $pallet-white;
+  transition: all 400ms;
+
+  a,
+  i,
+  li {
+    color: $pallet-white;
+    transition: color 400ms;
+  }
+
+  a:visited {
+    color: $pallet-white;
+  }
+
+  footer {
+    color: $pallet-white;
+  }
+}
+
+.pallet-light {
+  background-color: $pallet-white;
+  color: $pallet-dark;
+  transition: all 400ms;
+}

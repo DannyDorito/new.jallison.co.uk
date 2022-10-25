@@ -1,13 +1,33 @@
 import { useState } from 'react';
 import '../scss/Footer.scss';
 
-const Footer = () => {
+const Footer = ({ onClick, darkMode }: any) => {
   const [message] = useState('Made with <3 by John Allison');
-  // const [ isDarkMode, setDarkMode ] = useState(false);
+
   return (
     <>
-      <p className="footer">{message}</p>
-      {/* <button type="button" onClick={() => setDarkMode(!isDarkMode)}>{isDarkMode ? "darkmode" : "lightmode"}</button> */}
+      <div className="footer no-select">
+        <p>{message}</p>
+        {darkMode ? (
+          <span
+            onClick={onClick}
+            aria-label="Full Moon"
+            role="img"
+            className="pointer"
+          >
+            🌕
+          </span>
+        ) : (
+          <span
+            onClick={onClick}
+            aria-label="New Moon"
+            role="img"
+            className="pointer"
+          >
+            🌑
+          </span>
+        )}
+      </div>
     </>
   );
 };
