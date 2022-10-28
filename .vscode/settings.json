@@ -3,6 +3,7 @@
     "CLS",
     "FCP",
     "FID",
+    "gql",
     "LCP",
     "TTFB"
   ]
