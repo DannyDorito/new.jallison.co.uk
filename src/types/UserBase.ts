@@ -3,6 +3,6 @@ export interface UserBase {
 }
 
 interface User {
-  bio?: string;
-  __typename?: string;
+  bio: string;
+  __typename: string;
 }

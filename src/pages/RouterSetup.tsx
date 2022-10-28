@@ -14,7 +14,7 @@ const RouterSetup = () => {
 
   function toggleDarkMode() {
     setDarkMode(!darkMode);
-  };
+  }
 
   return (
     <div className={darkMode ? 'pallet-dark' : 'pallet-light'}>
@@ -23,11 +23,11 @@ const RouterSetup = () => {
         <Fragment>
           <Routes>
             {/* Adding a route, also add to Nav.tsx */}
-            <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/resume" element={<Resume />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/projects' element={<Projects />} />
+            <Route path='/resume' element={<Resume />} />
+            <Route path='*' element={<NotFound />} />
           </Routes>
         </Fragment>
         <Footer onClick={toggleDarkMode} darkMode={darkMode} />

@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
+import '../scss/NotFound.scss';
 
 const NotFound = () => {
   return (
     <>
       <div>
-        <h1>Not Found!</h1>
-        <Link to="/">Go home</Link>
+        <h1 className='no-select'>Not Found!</h1>
+        <Link to='/'>Go home</Link>
       </div>
     </>
   );

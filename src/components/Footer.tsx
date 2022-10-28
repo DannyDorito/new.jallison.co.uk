@@ -6,24 +6,14 @@ const Footer = ({ onClick, darkMode }: any) => {
 
   return (
     <>
-      <div className="footer no-select">
+      <div className='footer no-select'>
         <p>{message}</p>
         {darkMode ? (
-          <span
-            onClick={onClick}
-            aria-label="Full Moon"
-            role="img"
-            className="pointer"
-          >
+          <span onClick={onClick} aria-label='Full Moon' role='img' className='pointer'>
             🌕
           </span>
         ) : (
-          <span
-            onClick={onClick}
-            aria-label="New Moon"
-            role="img"
-            className="pointer"
-          >
+          <span onClick={onClick} aria-label='New Moon' role='img' className='pointer'>
             🌑
           </span>
         )}

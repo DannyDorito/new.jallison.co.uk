@@ -8,7 +8,7 @@ const Home = () => {
 
   return (
     <>
-      <div>
+      <div className='no-select'>
         <h1>John Allison</h1>
         {loading || error?.message ? <h3>...</h3> : <h3>{data?.user?.bio}</h3>}
       </div>

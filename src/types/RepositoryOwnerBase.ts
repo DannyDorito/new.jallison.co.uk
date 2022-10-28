@@ -11,7 +11,7 @@ interface Repository {
 }
 
 interface RepositoryNode {
-  name?: string;
-  url?: string;
+  name: string;
+  url: string;
   __typename?: string;
 }
