@@ -7,9 +7,12 @@ const Contact = () => {
       <div>
         <h1 className='no-select'>Contact me!</h1>
         {socialData.map((social) => (
-          <a href={social.link} key={social.platform}>
-            {social.platform}
-          </a>
+          <div key={social.platform}>
+            <a href={social.link} >
+              {social.platform}
+            </a>
+            {/* <img src={social.icon} alt={social.platform} className="icon"></img> */}
+          </div>
         ))}
       </div>
     </>
