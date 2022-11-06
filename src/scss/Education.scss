@@ -1,6 +1,6 @@
 @use './_Variables.scss' as v;
 @use './_Main.scss';
 
-h2 {
-  margin: 0;
+.education-list {
+  flex-direction: column;
 }

@@ -7,6 +7,7 @@ import NotFound from './NotFound';
 import Projects from './Projects';
 import Resume from './Resume';
 import Footer from '../components/Footer';
+import '../scss/_Main.scss';
 import '../scss/RouterSetup.scss';
 
 const RouterSetup = () => {

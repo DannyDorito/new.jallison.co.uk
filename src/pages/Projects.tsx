@@ -1,6 +1,7 @@
 import { useQuery } from '@apollo/client';
 import { RepositoryOwnerBase } from '../types/RepositoryOwnerBase';
 import { GET_GITHUB_USER } from '../gql/GET_GITHUB_USER';
+import '../scss/_Main.scss';
 import '../scss/Projects.scss';
 
 const Projects = () => {

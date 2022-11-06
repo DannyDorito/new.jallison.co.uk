@@ -10,3 +10,11 @@
   flex-direction: row;
   max-height: 100px;
 }
+
+.footer-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  flex-direction: column;
+}
