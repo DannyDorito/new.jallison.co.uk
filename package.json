@@ -31,7 +31,8 @@
     "start": "set PORT=3001 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "update": "npm install --save-dev @types/react@latest @types/react-dom@latest && npm install react-router-dom && npm install react-scripts"
   },
   "eslintConfig": {
     "extends": [
