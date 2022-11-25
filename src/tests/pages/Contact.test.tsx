@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import Contact from "../../pages/Contact";
-import { SocialData, socialData } from "../../types/SocialData";
+import { socialData } from "../../types/SocialData";
 
 describe("When the page is rendered", () => {
   it("should render <Contact /> JSX component", async () => {
-    const expectedSocialData: SocialData[] = socialData;
+    const expectedSocialData = socialData;
     render(
       <MemoryRouter>
         <Contact />

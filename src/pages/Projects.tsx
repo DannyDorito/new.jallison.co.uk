@@ -31,7 +31,7 @@ const Projects = () =>
       <>
         <div>
           <h1 className='no-select'>Projects</h1>
-          <h2 className='no-select'>Loading...</h2>
+          <h2 className='no-select'>...</h2>
         </div>
       </>
     );
