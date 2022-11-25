@@ -2,7 +2,7 @@ import { Fragment, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Contact from './Contact';
 import Home from './Home';
-import Nav from './Nav';
+import Nav from '../components/Nav';
 import NotFound from './NotFound';
 import Projects from './Projects';
 import Resume from './Resume';
