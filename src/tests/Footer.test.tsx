@@ -2,41 +2,41 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import Footer from "../components/Footer";
 
 describe("When page is rendered", () => {
-  it("should render <Footer /> JSX component", () => {
+  it("should render <Footer /> JSX component", async () => {
     render(
       <Footer />
     );
 
     expect(
-      screen.getByText("Made with")
+      await screen.findByText("Made with")
     ).toBeInTheDocument();
 
     expect(
-      screen.getByText("by John Allison")
+      await screen.findByText("by John Allison")
     ).toBeInTheDocument();
   });
 
-  it("should render a white heart", () => {
+  it("should render a white heart", async () => {
     render(
       <Footer darkMode={false} />
     );
 
     expect(
-      screen.getByText("🤍")
+      await screen.findByText("🤍")
     ).toBeInTheDocument();
   });
 
-  it("should render a black heart", () => {
+  it("should render a black heart", async () => {
     render(
       <Footer darkMode={true} />
     );
 
     expect(
-      screen.getByText("🖤")
+      await screen.findByText("🖤")
     ).toBeInTheDocument();
   });
 
-  it("should render a black heart on click", () => {
+  it("should render a black heart on click", async () => {
     const onClickMock = jest.fn();
 
     render(

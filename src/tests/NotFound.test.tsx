@@ -3,7 +3,7 @@ import { MemoryRouter } from "react-router-dom";
 import NotFound from "../pages/NotFound";
 
 describe("When page is rendered", () => {
-  it("should render <NotFound /> JSX component", () => {
+  it("should render <NotFound /> JSX component", async () => {
     render(
       <MemoryRouter>
         <NotFound />
@@ -11,11 +11,11 @@ describe("When page is rendered", () => {
     );
 
     expect(
-      screen.getByText("Not Found!")
+      await screen.findByText("Not Found!")
     ).toBeInTheDocument();
 
     expect(
-      screen.getByText("Go Home")
+      await screen.findByText("Go Home")
     ).toBeInTheDocument();
   });
 });

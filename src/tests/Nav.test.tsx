@@ -3,7 +3,7 @@ import { MemoryRouter } from "react-router-dom";
 import Nav from "../pages/Nav";
 
 describe("When page is rendered", () => {
-  it("should render <Nav /> JSX component", () => {
+  it("should render <Nav /> JSX component", async () => {
     render(
       <MemoryRouter>
         <Nav />
@@ -11,19 +11,19 @@ describe("When page is rendered", () => {
     );
 
     expect(
-      screen.getByText("Home")
+      await screen.findByText("Home")
     ).toBeInTheDocument();
 
     expect(
-      screen.getByText("Contact")
+      await screen.findByText("Contact")
     ).toBeInTheDocument();
 
     expect(
-      screen.getByText("Projects")
+      await screen.findByText("Projects")
     ).toBeInTheDocument();
 
     expect(
-      screen.getByText("Resume")
+      await screen.findByText("Resume")
     ).toBeInTheDocument();
   });
 });
