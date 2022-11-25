@@ -25,7 +25,9 @@ const Nav = () =>
             </NavLink>
           </li>
           <li>
-            <NavLink className={( navData ) => navData.isActive ? "active" : "not-active"} to="/resume">Resume</NavLink>
+            <NavLink className={( navData ) => navData.isActive ? "active" : "not-active"} to="/resume">
+              Resume
+            </NavLink>
           </li>
         </ul>
       </div>
