@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import Footer from "../components/Footer";
+import Footer from "../../components/Footer";
 
 describe("When page is rendered", () => {
   it("should render <Footer /> JSX component", async () => {

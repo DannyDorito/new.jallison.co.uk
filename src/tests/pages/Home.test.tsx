@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { MockedProvider } from "@apollo/client/testing";
-import Home from "../pages/Home";
+import Home from "../../pages/Home";
 
 describe("When the page is rendered", () => {
   it("should render <Home /> JSX component", async () =>{
@@ -11,7 +11,6 @@ describe("When the page is rendered", () => {
           <Home />
         </MemoryRouter>
       </MockedProvider>
-
     );
 
     expect(

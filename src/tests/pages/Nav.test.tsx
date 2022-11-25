@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import Nav from "../pages/Nav";
+import Nav from "../../pages/Nav";
 
 describe("When page is rendered", () => {
   it("should render <Nav /> JSX component", async () => {

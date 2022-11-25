@@ -4,6 +4,7 @@ import github from '../icons/github.svg';
 import instagram from '../icons/instagram.svg';
 import filetext from '../icons/file-text.svg';
 import linkedin from '../icons/linkedin.svg';
+import youtube from '../icons/youtube.svg';
 
 export interface SocialData {
   platform: string;
@@ -41,5 +42,10 @@ export const socialData: SocialData[] = [
     platform: 'LinkedIn',
     icon: linkedin,
     link: 'https://www.linkedin.com/in/johnallison-'
+  },
+  {
+    platform: 'YouTube',
+    icon: youtube,
+    link: 'https://youtube.com/@JohnAllis0n'
   }
 ];
