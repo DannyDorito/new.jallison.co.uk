@@ -3,7 +3,8 @@ import Skills from "../components/Skills";
 import '../scss/_Main.scss';
 import '../scss/Resume.scss';
 
-const Resume = () => {
+const Resume = () =>
+{
   return (
     <>
       <Skills />

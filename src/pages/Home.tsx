@@ -1,11 +1,12 @@
 import { useQuery } from '@apollo/client';
-import { GET_GITHUB_BIO } from '../gql/GET_GITHUB_BIO';
+import { GetGitHubBio } from '../gql/GetGitHubBio';
 import { UserBase } from '../types/UserBase';
 import '../scss/_Main.scss';
 import '../scss/Home.scss';
 
 const Home = () => {
-  const { loading, error, data } = useQuery<UserBase>(GET_GITHUB_BIO);
+  const username = "DannyDorito";
+  const { loading, error, data } = useQuery<UserBase>(GetGitHubBio, { variables: { name: username } });
 
   return (
     <>

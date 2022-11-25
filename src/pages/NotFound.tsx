@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom';
 import '../scss/_Main.scss';
 import '../scss/NotFound.scss';
 
-const NotFound = () => {
+const NotFound = () =>
+{
   return (
     <>
       <div>

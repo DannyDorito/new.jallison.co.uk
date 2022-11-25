@@ -1,6 +1,7 @@
 import '../scss/Footer.scss';
 
-const Footer = ({ onClick, darkMode }: any) => {
+const Footer = ( { onClick, darkMode }: any ) =>
+{
   return (
     <>
       <div className='footer no-select'>
