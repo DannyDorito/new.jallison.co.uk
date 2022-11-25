@@ -8,7 +8,7 @@ const NotFound = () =>
     <>
       <div>
         <h1 className='no-select'>Not Found!</h1>
-        <Link to='/'>Go home</Link>
+        <Link to='/'>Go Home</Link>
       </div>
     </>
   );
