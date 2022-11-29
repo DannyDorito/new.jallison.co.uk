@@ -7,7 +7,14 @@
 	"settings": {
 		"cSpell.words": [
 			"msedge",
-			"npx"
+			"npx",
+			"CLS",
+			"FCP",
+			"FID",
+			"gql",
+			"IIS",
+			"LCP",
+			"TTFB"
 		]
-	}
+	},
 }
