@@ -21,7 +21,7 @@ export const socialData: SocialData[] = [
   {
     platform: 'Email',
     icon: mail,
-    link: 'mailto:john@jallison.co.uk'
+    link: 'mailto:contact@jallison.co.uk'
   },
   {
     platform: 'GitHub',
