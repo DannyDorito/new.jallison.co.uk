@@ -43,9 +43,11 @@ const Projects = () =>
           <h1 className='no-select'>Projects</h1>
           {data?.repositoryOwner?.repositories?.nodes?.filter( f => !ignoredProjects.includes( f.name ) )
             .map( ( item ) => (
-              <a href={item.url?.toString()} key={item.name?.toLowerCase()}>
-                {item.name?.replaceAll( '-', ' ' )}
-              </a>
+              <div key={item.name?.toLowerCase()}>
+                <a href={item.url?.toString()} key={item.name?.toLowerCase()}>
+                  {item.name?.replaceAll( '-', ' ' )}
+                </a>
+              </div>
             ) )}
         </div>
       </>

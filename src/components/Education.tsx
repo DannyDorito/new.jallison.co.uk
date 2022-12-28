@@ -2,7 +2,7 @@ const Education = () =>
 {
   return (
     <>
-      <h1>Education</h1>
+      <h1 className='no-select'>Education</h1>
     </>
   );
 }

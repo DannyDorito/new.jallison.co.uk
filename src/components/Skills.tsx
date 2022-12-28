@@ -5,8 +5,8 @@ const Skills = () =>
 {
   return (
     <>
-      <h1>Skills</h1>
-      <h2>Programming Languages</h2>
+      <h1 className='no-select'>Skills</h1>
+      <h2 className='no-select'>Programming Languages</h2>
       <ul className="skill-list">
         {programmingLanguages.map( ( language ) => (
           <li key={language.name}>
@@ -14,7 +14,7 @@ const Skills = () =>
           </li>
         ) )}
       </ul>
-      <h2>Frameworks</h2>
+      <h2 className='no-select'>Frameworks</h2>
       <ul className="skill-list">
         {javascriptFrameworks.map( ( framework ) => (
           <li key={framework.name}>
@@ -22,7 +22,7 @@ const Skills = () =>
           </li>
         ) )}
       </ul>
-      <h2>DevOps</h2>
+      <h2 className='no-select'>DevOps</h2>
       <ul className="skill-list">
         {devops.map( ( devops ) => (
           <li key={devops.name}>
