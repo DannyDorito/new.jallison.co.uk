@@ -1,0 +1,11 @@
+@use './_Variables.scss' as v;
+@use './_Main.scss';
+
+p.experience {
+  margin: 0;
+  text-align: center;
+}
+
+p.experience:last-of-type {
+  margin-bottom: 24px;
+}
