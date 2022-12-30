@@ -6,7 +6,7 @@ const Contact = () =>
   return (
     <>
       <div>
-        <h1 className='no-select'>Contact me!</h1>
+        <h1 className='no-select'>Contact me</h1>
         {socialData.map( ( social ) => (
           <div key={social.platform}>
             <a href={social.link} key={social.platform}>

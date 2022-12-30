@@ -2,8 +2,10 @@ import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import Education from "../../../components/Education";
 
-describe("When the page is rendered", () => {
-  it("should render the <Education /> JSX component", async () => {
+describe( "When the page is rendered", () =>
+{
+  it( "should render the <Education /> JSX component", async () =>
+  {
     render(
       <MemoryRouter>
         <Education />
@@ -11,7 +13,7 @@ describe("When the page is rendered", () => {
     );
 
     expect(
-      await screen.findByText("Education")
+      await screen.findByText( "Education" )
     ).toBeInTheDocument();
-  });
-});
+  } );
+} );

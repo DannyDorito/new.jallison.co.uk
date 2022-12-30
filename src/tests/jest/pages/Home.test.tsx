@@ -3,8 +3,10 @@ import { MemoryRouter } from "react-router-dom";
 import { MockedProvider } from "@apollo/client/testing";
 import Home from "../../../pages/Home";
 
-describe("When the page is rendered", () => {
-  it("should render <Home /> JSX component", async () => {
+describe( "When the page is rendered", () =>
+{
+  it( "should render <Home /> JSX component", async () =>
+  {
     render(
       <MockedProvider mocks={[]} addTypename={false}>
         <MemoryRouter>
@@ -14,11 +16,11 @@ describe("When the page is rendered", () => {
     );
 
     expect(
-      await screen.findByText("...")
+      await screen.findByText( "..." )
     ).toBeInTheDocument();
 
     expect(
-      await screen.findByText("John Allison")
+      await screen.findByText( "John Allison" )
     ).toBeInTheDocument();
-  });
-});
+  } );
+} );

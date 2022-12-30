@@ -4,9 +4,10 @@ import { UserBase } from '../types/UserBase';
 import '../scss/_Main.scss';
 import '../scss/Home.scss';
 
-const Home = () => {
+const Home = () =>
+{
   const username = "DannyDorito";
-  const { loading, error, data } = useQuery<UserBase>(GetGitHubBio, { variables: { name: username } });
+  const { loading, error, data } = useQuery<UserBase>( GetGitHubBio, { variables: { name: username } } );
 
   return (
     <>

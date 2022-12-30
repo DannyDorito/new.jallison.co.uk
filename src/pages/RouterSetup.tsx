@@ -10,11 +10,13 @@ import Footer from '../components/Footer';
 import '../scss/_Main.scss';
 import '../scss/RouterSetup.scss';
 
-const RouterSetup = () => {
-  let [darkMode, setDarkMode] = useState(false);
+const RouterSetup = () =>
+{
+  let [ darkMode, setDarkMode ] = useState( false );
 
-  function toggleDarkMode() {
-    setDarkMode(!darkMode);
+  function toggleDarkMode ()
+  {
+    setDarkMode( !darkMode );
   }
 
   return (

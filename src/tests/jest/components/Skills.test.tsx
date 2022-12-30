@@ -3,8 +3,10 @@ import { MemoryRouter } from "react-router-dom";
 import Skills from "../../../components/Skills";
 import { devops, javascriptFrameworks, programmingLanguages } from "../../../types/ProgrammingLanguageData";
 
-describe("When the page is rendered", () => {
-  it("should render <Skills /> JSX component", async () => {
+describe( "When the page is rendered", () =>
+{
+  it( "should render <Skills /> JSX component", async () =>
+  {
     const expectedProgrammingLanguages = programmingLanguages;
     const expectedJavascriptFrameworks = javascriptFrameworks;
     const expectedDevOps = devops;
@@ -16,37 +18,40 @@ describe("When the page is rendered", () => {
     );
 
     expect(
-      await screen.findByText("Skills")
+      await screen.findByText( "Skills" )
     ).toBeInTheDocument();
 
     expect(
-      await screen.findByText("Programming Languages")
+      await screen.findByText( "Programming Languages" )
     ).toBeInTheDocument();
 
-    expectedProgrammingLanguages.forEach(async expected => {
+    expectedProgrammingLanguages.forEach( async expected =>
+    {
       expect(
-        await screen.findByText(expected.name)
+        await screen.findByText( expected.name )
       ).toBeInTheDocument();
-    });
+    } );
 
     expect(
-      await screen.findByText("Frameworks")
+      await screen.findByText( "Frameworks" )
     ).toBeInTheDocument();
 
-    expectedJavascriptFrameworks.forEach(async expected => {
+    expectedJavascriptFrameworks.forEach( async expected =>
+    {
       expect(
-        await screen.findByText(expected.name)
+        await screen.findByText( expected.name )
       ).toBeInTheDocument();
-    });
+    } );
 
     expect(
-      await screen.findByText("DevOps")
+      await screen.findByText( "DevOps" )
     ).toBeInTheDocument();
 
-    expectedDevOps.forEach(async expected => {
+    expectedDevOps.forEach( async expected =>
+    {
       expect(
-        await screen.findByText(expected.name)
+        await screen.findByText( expected.name )
       ).toBeInTheDocument();
-    });
-  });
-});
+    } );
+  } );
+} );

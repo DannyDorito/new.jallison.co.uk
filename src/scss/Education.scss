@@ -1,6 +1,11 @@
 @use './_Variables.scss' as v;
 @use './_Main.scss';
 
-.education-list {
-  flex-direction: column;
+p.education {
+  margin: 0;
+  text-align: center;
+}
+
+p.education:last-of-type {
+  margin-bottom: 24px;
 }

@@ -6,7 +6,8 @@ import filetext from '../icons/file-text.svg';
 import linkedin from '../icons/linkedin.svg';
 import youtube from '../icons/youtube.svg';
 
-export interface SocialData {
+export interface SocialData
+{
   platform: string;
   icon: string;
   link: string;

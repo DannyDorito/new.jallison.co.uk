@@ -3,8 +3,10 @@ import { MemoryRouter } from "react-router-dom";
 import Contact from "../../../pages/Contact";
 import { socialData } from "../../../types/SocialData";
 
-describe("When the page is rendered", () => {
-  it("should render <Contact /> JSX component", async () => {
+describe( "When the page is rendered", () =>
+{
+  it( "should render <Contact /> JSX component", async () =>
+  {
     const expectedSocialData = socialData;
     render(
       <MemoryRouter>
@@ -13,17 +15,18 @@ describe("When the page is rendered", () => {
     );
 
     expect(
-      await screen.findByText("Contact me!")
+      await screen.findByText( "Contact me" )
     ).toBeInTheDocument();
 
-    expectedSocialData.forEach(async expected => {
+    expectedSocialData.forEach( async expected =>
+    {
       expect(
-        await screen.findByText(expected.platform)
+        await screen.findByText( expected.platform )
       ).toBeInTheDocument();
 
       expect(
-        await screen.findByText(expected.platform)
-      ).toHaveAttribute('href', expected.link);
-    });
-  });
-});
+        await screen.findByText( expected.platform )
+      ).toHaveAttribute( 'href', expected.link );
+    } );
+  } );
+} );

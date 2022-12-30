@@ -24,8 +24,13 @@ const Projects = () =>
   );
   if ( error )
   {
-    return <>Error: {error}</>;
-  } else if ( loading )
+    return (
+      <>
+        Error: {error}
+      </>
+    )
+  }
+  else if ( loading )
   {
     return (
       <>
@@ -35,7 +40,8 @@ const Projects = () =>
         </div>
       </>
     );
-  } else
+  }
+  else
   {
     return (
       <>
