@@ -25,7 +25,7 @@ const RouterSetup = () =>
         <Nav />
         <Fragment>
           <Routes>
-            {/* Adding a route, also add to Nav.tsx */}
+            {/* Adding a route, also add to Nav.tsx and sitemap.xml */}
             <Route path='/' element={<Home />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/projects' element={<Projects />} />
