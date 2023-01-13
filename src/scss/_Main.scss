@@ -1,4 +1,8 @@
 @use './_Variables.scss' as v;
+@font-face {
+  font-family: v.$pallet-font-style, monospace;
+  src: url('../fonts/FiraCode-Regular.ttf') format('truetype');
+}
 
 html,
 body {
@@ -13,6 +17,45 @@ body {
   overflow: overlay;
   list-style-type: none;
 }
+
+footer {
+  color: v.$pallet-dark;
+}
+
+.pallet-dark {
+  background-color: v.$pallet-dark;
+  color: v.$pallet-white;
+  transition: v.$transition-all;
+
+  a,
+  i,
+  li {
+    color: v.$pallet-white;
+    transition: v.$transition-colour;
+  }
+
+  a:visited {
+    color: v.$pallet-white;
+  }
+}
+
+.pallet-light {
+  background-color: v.$pallet-white;
+  color: v.$pallet-dark;
+  transition: v.$transition-all;
+
+  a,
+  i,
+  li {
+    color: v.$pallet-dark;
+    transition: v.$transition-colour;
+  }
+
+  a:visited {
+    color: v.$pallet-dark;
+  }
+}
+
 
 .no-select {
   -webkit-user-select: none;
