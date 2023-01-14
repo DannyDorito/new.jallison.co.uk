@@ -66,7 +66,8 @@ describe( "When the page is rendered", () =>
     ).toBeInTheDocument();
   } )
 
-  it("should display an network error message", async () => {
+  it( "should display an network error message", async () =>
+  {
     const mocks: ReadonlyArray<MockedResponse> = [ {
       request: {
         query: GetGitHubBio,
@@ -74,7 +75,7 @@ describe( "When the page is rendered", () =>
           name: "DannyDorito"
         },
       },
-      error: new Error("An error occurred")
+      error: new Error( "An error occurred" )
     } ];
 
     render(
@@ -92,9 +93,10 @@ describe( "When the page is rendered", () =>
     expect(
       await screen.findByText( "Error: An error occurred" )
     ).toBeInTheDocument();
-  })
+  } )
 
-  it("should display a graphql error message", async () => {
+  it( "should display a graphql error message", async () =>
+  {
     const mocks: ReadonlyArray<MockedResponse> = [ {
       request: {
         query: GetGitHubBio,
@@ -103,7 +105,7 @@ describe( "When the page is rendered", () =>
         },
       },
       result: {
-        errors: [new GraphQLError("GraphQl error")],
+        errors: [ new GraphQLError( "GraphQl error" ) ],
       }
     } ];
 
@@ -122,5 +124,5 @@ describe( "When the page is rendered", () =>
     expect(
       await screen.findByText( "Error: GraphQl error" )
     ).toBeInTheDocument();
-  })
+  } )
 } );
