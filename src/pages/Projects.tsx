@@ -6,7 +6,7 @@ import '../scss/Projects.scss';
 
 const Projects = () =>
 {
-  const ignoredProjects: string[] = [ 'DannyDorito', `ARMA-2-Wasteland` ];
+  const ignoredProjects: string[] = [ 'DannyDorito' ];
   const username = "DannyDorito";
   const take = 100;
   const isFork = false;
