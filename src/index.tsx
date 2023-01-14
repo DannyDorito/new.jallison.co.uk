@@ -5,6 +5,8 @@ import reportWebVitals from './reportWebVitals';
 import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink, from } from '@apollo/client';
 import { onError } from '@apollo/client/link/error';
 import { RetryLink } from '@apollo/client/link/retry';
+import { LocalStorageWrapper } from 'apollo3-cache-persist/lib/storageWrappers';
+import { persistCacheSync } from 'apollo3-cache-persist/lib/persistCacheSync';
 
 const root = ReactDOM.createRoot( document.getElementById( 'root' ) as HTMLElement );
 
@@ -35,9 +37,14 @@ const errorLink = onError( ( { graphQLErrors, networkError } ) =>
 const retryLink = new RetryLink();
 const cache = new InMemoryCache();
 
+persistCacheSync( {
+  cache,
+  storage: new LocalStorageWrapper( window.localStorage ),
+} )
+
 const client = new ApolloClient( {
   link: from( [ errorLink, retryLink, httpLink ] ),
-  cache: cache
+  cache: cache,
 } );
 
 root.render(
