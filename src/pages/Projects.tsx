@@ -50,7 +50,7 @@ const Projects = () =>
           {data?.repositoryOwner?.repositories?.nodes?.filter( f => !ignoredProjects.includes( f.name ) )
             .map( ( item ) => (
               <div key={item.name?.toLowerCase()}>
-                <a href={item.url?.toString()} target="_blank" key={item.name?.toLowerCase()}>
+                <a href={item.url?.toString()} target="_blank" rel="noopener noreferrer" key={item.name?.toLowerCase()}>
                   {item.name?.replaceAll( '-', ' ' )}
                 </a>
               </div>
