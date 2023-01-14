@@ -1,7 +1,21 @@
 @use './_Variables.scss' as v;
+
 @font-face {
   font-family: v.$pallet-font-style, monospace;
-  src: url('../fonts/FiraCode-Regular.ttf') format('truetype');
+  src: url('../fonts/FiraCode-VF.ttf') format('truetype');
+
+  @supports (font-variation-settings: normal) {
+    code {
+      font-family: v.$pallet-font-style-vf, monospace;
+    }
+  }
+
+  @media all and (-ms-high-contrast: none),
+  (-ms-high-contrast: active) {
+    .ie10up {
+      font-feature-settings: "calt";
+    }
+  }
 }
 
 html,
