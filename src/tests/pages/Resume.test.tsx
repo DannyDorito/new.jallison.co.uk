@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import Resume from "../../../pages/Resume";
+import Resume from "../../pages/Resume";
 
 describe( "When the page is rendered", () =>
 {

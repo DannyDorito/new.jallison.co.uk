@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import Skills from "../../../components/Skills";
-import { devops, javascriptFrameworks, programmingLanguages } from "../../../types/ProgrammingLanguageData";
+import Skills from "../../components/Skills";
+import { devops, javascriptFrameworks, programmingLanguages } from "../../types/ProgrammingLanguageData";
 
 describe( "When the page is rendered", () =>
 {

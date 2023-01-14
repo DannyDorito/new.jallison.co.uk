@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { MockedProvider } from "@apollo/client/testing";
-import Projects from "../../../pages/Projects";
+import Projects from "../../pages/Projects";
 
 describe( "When the page is rendered", () =>
 {
