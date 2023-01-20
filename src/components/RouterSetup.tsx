@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useLocalStorage } from '../helpers/UseLocalStorage';
+import { preferDarkMode } from '../helpers/PreferDarkMode';
 import Contact from '../pages/Contact';
 import Home from '../pages/Home';
 import Nav from './Nav';
@@ -13,7 +14,7 @@ import '../scss/components/RouterSetup.scss';
 
 const RouterSetup = () =>
 {
-  let [ darkMode, setDarkMode ] = useLocalStorage( "darkMode", false );
+  let [ darkMode, setDarkMode ] = useLocalStorage( "darkMode", preferDarkMode() );
 
   function toggleDarkMode ()
   {

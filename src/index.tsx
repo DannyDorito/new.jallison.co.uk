@@ -8,7 +8,6 @@ import ReactDOM from 'react-dom/client';
 import Router from './components/RouterSetup';
 import reportWebVitals from './reportWebVitals';
 
-
 const root = ReactDOM.createRoot( document.getElementById( 'root' ) as HTMLElement );
 
 const GITHUB_BASE_URL = 'https://api.github.com/graphql';
