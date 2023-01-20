@@ -70,7 +70,6 @@ footer {
   }
 }
 
-
 .no-select {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -89,4 +88,12 @@ h1 {
 div,
 img {
   flex: 1;
+}
+
+.parent {
+  all: unset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: stretch;
 }

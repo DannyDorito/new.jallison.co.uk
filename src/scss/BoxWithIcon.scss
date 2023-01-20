@@ -1,0 +1,22 @@
+@use './_Variables.scss' as v;
+@use './_Main.scss';
+
+div.child {
+  all: unset;
+  width: 40%;
+  display: flex;
+}
+
+div.child:last-of-type {
+  width: 80%;
+}
+
+img {
+  max-width: 24px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+a:link {
+  text-decoration: none;
+}
