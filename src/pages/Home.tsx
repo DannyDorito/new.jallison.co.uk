@@ -13,7 +13,7 @@ const Home = () =>
       <>
         <div className='no-select'>
           <h1>John Allison</h1>
-          <h3>Error: {error?.message}</h3>
+          <h2>Error: {error?.message}</h2>
         </div>
       </>
     );
@@ -23,7 +23,7 @@ const Home = () =>
       <>
         <div className='no-select'>
           <h1>John Allison</h1>
-          <h3>...</h3>
+          <h2>...</h2>
         </div>
       </>
     );
@@ -32,7 +32,7 @@ const Home = () =>
     return (
       <div className='no-select'>
         <h1>John Allison</h1>
-        <h3>{data?.user?.bio}</h3>
+        <h2>{data?.user?.bio}</h2>
       </div>
     );
   }
