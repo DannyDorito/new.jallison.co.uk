@@ -1,9 +1,12 @@
 import '../scss/About.scss';
 
-const About = () => {
+const About = () =>
+{
   return (
     <>
-      <h1>About</h1>
+      <div>
+        <h1>About</h1>
+      </div>
     </>
   )
 }
