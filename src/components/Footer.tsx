@@ -7,9 +7,7 @@ const Footer = ( { onClick, darkMode }: any ) =>
   return (
     <>
       <div className='footer no-select'>
-        <p>Made with</p>
-        <img onClick={onClick} className='pointer' src={darkMode ? whiteheart : blackheart}></img>
-        <p>by John Allison &#0169; {new Date().getFullYear()}</p>
+        <p>Made with<img onClick={onClick} className='pointer' src={darkMode ? whiteheart : blackheart}></img>by John Allison &#0169; {new Date().getFullYear()}</p>
       </div>
     </>
   );
