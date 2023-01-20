@@ -1,8 +1,9 @@
 import { useQuery } from '@apollo/client';
 import { RepositoryOwnerBase } from '../types/RepositoryOwnerBase';
 import { GetGitHubRepos } from '../gql/GetGitHubRepos';
-import '../scss/_Main.scss';
 import '../scss/Projects.scss';
+import BoxWithIcon from '../components/BoxWithIcon';
+import terminal from '../icons/terminal.svg';
 
 const Projects = () =>
 {
@@ -47,14 +48,12 @@ const Projects = () =>
       <>
         <div>
           <h1 className='no-select'>Projects</h1>
-          {data?.repositoryOwner?.repositories?.nodes?.filter( f => !ignoredProjects.includes( f.name ) )
-            .map( ( item ) => (
-              <div key={item.name?.toLowerCase()}>
-                <a href={item.url?.toString()} target="_blank" rel="noopener noreferrer" key={item.name?.toLowerCase()}>
-                  {item.name?.replaceAll( '-', ' ' )}
-                </a>
-              </div>
-            ) )}
+          <div className="parent">
+            {data?.repositoryOwner?.repositories?.nodes?.filter( f => !ignoredProjects.includes( f.name ) )
+              .map( ( item ) => (
+                <BoxWithIcon props={{ className: "child", text: item.name?.replaceAll( '-', ' ' ), src: terminal, alt: "Terminal", link: item.url }} key={item.name?.toLowerCase()} />
+              ) )}
+          </div>
         </div>
       </>
     );
