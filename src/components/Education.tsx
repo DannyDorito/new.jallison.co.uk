@@ -1,5 +1,5 @@
 import { education } from "../types/EducationData";
-import '../scss/Education.scss';
+import '../scss/components/Education.scss';
 
 const Education = () =>
 {

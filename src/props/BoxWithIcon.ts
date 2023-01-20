@@ -1,4 +1,4 @@
-export interface BoxWithIconInterface
+export interface BoxWithIconProps
 {
   className: string | undefined,
   text: string

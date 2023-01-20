@@ -1,12 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import Router from './pages/RouterSetup';
-import reportWebVitals from './reportWebVitals';
 import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink, from } from '@apollo/client';
 import { onError } from '@apollo/client/link/error';
 import { RetryLink } from '@apollo/client/link/retry';
 import { LocalStorageWrapper } from 'apollo3-cache-persist/lib/storageWrappers';
 import { persistCacheSync } from 'apollo3-cache-persist/lib/persistCacheSync';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import Router from './components/RouterSetup';
+import reportWebVitals from './reportWebVitals';
+
 
 const root = ReactDOM.createRoot( document.getElementById( 'root' ) as HTMLElement );
 

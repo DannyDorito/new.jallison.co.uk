@@ -1,4 +1,4 @@
-import '../scss/Footer.scss';
+import '../scss/components/Footer.scss';
 
 const Footer = ( { onClick, darkMode }: any ) =>
 {

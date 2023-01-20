@@ -1,18 +1,19 @@
-import { Fragment, useState } from 'react';
+import { Fragment } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Contact from './Contact';
-import Home from './Home';
-import Nav from '../components/Nav';
+import { useLocalStorage } from '../helpers/UseLocalStorage';
+import Contact from '../pages/Contact';
+import Home from '../pages/Home';
+import Nav from './Nav';
 import NotFound from './NotFound';
-import Projects from './Projects';
-import Resume from './Resume';
-import Footer from '../components/Footer';
-import '../scss/RouterSetup.scss';
-import About from './About';
+import Projects from '../pages/Projects';
+import Resume from '../pages/Resume';
+import Footer from './Footer';
+import About from '../pages/About';
+import '../scss/components/RouterSetup.scss';
 
 const RouterSetup = () =>
 {
-  let [ darkMode, setDarkMode ] = useState( false );
+  let [ darkMode, setDarkMode ] = useLocalStorage( "darkMode", false );
 
   function toggleDarkMode ()
   {

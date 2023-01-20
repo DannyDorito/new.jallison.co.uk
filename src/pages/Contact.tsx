@@ -1,6 +1,6 @@
 import { socialData } from '../types/SocialData';
-import '../scss/Contact.scss';
 import BoxWithIcon from '../components/BoxWithIcon';
+import '../scss/pages/Contact.scss';
 
 const Contact = () =>
 {

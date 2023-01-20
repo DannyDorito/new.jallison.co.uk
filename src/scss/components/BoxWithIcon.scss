@@ -1,5 +1,5 @@
-@use './_Variables.scss' as v;
-@use './_Main.scss';
+@use '../Variables' as v;
+@use '../_Main.scss';
 
 div.child {
   all: unset;

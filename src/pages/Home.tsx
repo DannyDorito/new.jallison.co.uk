@@ -1,7 +1,7 @@
 import { useQuery } from '@apollo/client';
 import { GetGitHubBio } from '../gql/GetGitHubBio';
 import { UserBase } from '../types/UserBase';
-import '../scss/Home.scss';
+import '../scss/pages/Home.scss';
 
 const Home = () =>
 {

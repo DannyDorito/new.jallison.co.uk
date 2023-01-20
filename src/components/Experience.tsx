@@ -1,5 +1,5 @@
-import '../scss/Experience.scss';
 import { experience } from '../types/ExperienceData';
+import '../scss/components/Experience.scss';
 
 const Experience = () =>
 {

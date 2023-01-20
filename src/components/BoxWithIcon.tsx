@@ -1,7 +1,7 @@
-import { BoxWithIconInterface } from "../types/BoxWithIcon";
-import '../scss/BoxWithIcon.scss';
+import { BoxWithIconProps } from "../props/BoxWithIcon";
+import '../scss/components/BoxWithIcon.scss';
 
-const BoxWithIcon = ( { props }: { props: BoxWithIconInterface } ) =>
+const BoxWithIcon = ( { props }: { props: BoxWithIconProps } ) =>
 {
   return (
     <>

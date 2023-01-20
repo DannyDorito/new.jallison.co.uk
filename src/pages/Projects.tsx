@@ -1,9 +1,9 @@
 import { useQuery } from '@apollo/client';
 import { RepositoryOwnerBase } from '../types/RepositoryOwnerBase';
 import { GetGitHubRepos } from '../gql/GetGitHubRepos';
-import '../scss/Projects.scss';
 import BoxWithIcon from '../components/BoxWithIcon';
 import terminal from '../icons/terminal.svg';
+import '../scss/pages/Projects.scss';
 
 const Projects = () =>
 {

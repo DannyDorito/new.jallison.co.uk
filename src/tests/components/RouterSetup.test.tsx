@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { MockedProvider } from "@apollo/client/testing";
-import RouterSetup from "../../pages/RouterSetup";
+import RouterSetup from "../../components/RouterSetup";
 
 describe( "When the page is initially loaded", () =>
 {
