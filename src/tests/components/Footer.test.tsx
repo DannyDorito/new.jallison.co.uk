@@ -14,33 +14,35 @@ describe( "When page is rendered", () =>
     ).toBeInTheDocument();
 
     expect(
-      await screen.findByText( "by John Allison" )
-    ).toBeInTheDocument();
-  } );
-
-  it( "should render a white heart", async () =>
-  {
-    render(
-      <Footer darkMode={false} />
-    );
-
-    expect(
-      await screen.findByText( "🤍" )
+      await screen.findByText( `by John Allison © ${ new Date().getFullYear() }` )
     ).toBeInTheDocument();
   } );
 
   it( "should render a black heart", async () =>
   {
     render(
+      <Footer darkMode={false} />
+    );
+    const logo = screen.getByRole( 'img' );
+    expect(
+      logo
+    ).toHaveAttribute( 'src', 'heart-black.svg' );
+  } );
+
+
+  it( "should render a white heart", async () =>
+  {
+    render(
       <Footer darkMode={true} />
     );
 
+    const logo = screen.getByRole( 'img' );
     expect(
-      await screen.findByText( "🖤" )
-    ).toBeInTheDocument();
+      logo
+    ).toHaveAttribute( 'src', 'heart-white.svg' );
   } );
 
-  it( "should render a black heart on click", async () =>
+  it( "should render a white heart on click", async () =>
   {
     const onClickMock = jest.fn();
 
@@ -48,7 +50,7 @@ describe( "When page is rendered", () =>
       <Footer darkMode={false} onClick={onClickMock} />
     );
 
-    fireEvent.click( screen.getByText( "🤍" ) );
+    fireEvent.click( screen.getByRole( 'img' ) );
 
     expect( onClickMock ).toBeCalled();
   } );

@@ -1,4 +1,6 @@
 import '../scss/components/Footer.scss';
+import blackheart from '../icons/heart-black.svg';
+import whiteheart from '../icons/heart-white.svg';
 
 const Footer = ( { onClick, darkMode }: any ) =>
 {
@@ -6,12 +8,8 @@ const Footer = ( { onClick, darkMode }: any ) =>
     <>
       <div className='footer no-select'>
         <p>Made with</p>
-        {darkMode ? (
-          <span onClick={onClick} aria-label='Black Heart' role='img' className='pointer'>&nbsp;🖤&nbsp;</span>
-        ) : (
-          <span onClick={onClick} aria-label='White Heart' role='img' className='pointer'>&nbsp;🤍&nbsp;</span>
-        )}
-        <p>by John Allison</p>
+        {darkMode ? <img onClick={onClick} className='pointer' src={whiteheart}></img> : <img onClick={onClick} className='pointer' src={blackheart}></img> }
+        <p>by John Allison &#0169; {new Date().getFullYear()}</p>
       </div>
     </>
   );
