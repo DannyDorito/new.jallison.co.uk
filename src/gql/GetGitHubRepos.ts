@@ -7,6 +7,8 @@ query GetGitHubRepositories($name: String!, $take: Int, $isFork: Boolean, $priva
       nodes {
         name
         url
+        stargazerCount
+        forkCount
       }
     }
   }
