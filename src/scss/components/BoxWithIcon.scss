@@ -7,7 +7,7 @@ div.child {
   display: flex;
 }
 
-div.child:last-of-type {
+div.child:nth-last-child(1):nth-child(odd) {
   width: 80%;
 }
 

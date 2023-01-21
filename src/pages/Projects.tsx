@@ -11,7 +11,7 @@ const Projects = () =>
   const ignoredProjects: string[] = [ 'DannyDorito' ];
   const username = "DannyDorito";
   const take = 100;
-  const isFork = false;
+  const isFork = null;
   const privacy = "PUBLIC";
   const { loading, error, data } = useQuery<RepositoryOwnerBase>( GetGitHubRepos,
     {
