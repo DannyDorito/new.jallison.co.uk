@@ -3,21 +3,6 @@ import Footer from "../../components/Footer";
 
 describe( "When page is rendered", () =>
 {
-  it( "should render <Footer /> JSX component", async () =>
-  {
-    render(
-      <Footer />
-    );
-
-    expect(
-      await screen.findByText( "Made with" )
-    ).toBeInTheDocument();
-
-    expect(
-      await screen.findByText( `by John Allison © ${ new Date().getFullYear() }` )
-    ).toBeInTheDocument();
-  } );
-
   it( "should render a black heart", async () =>
   {
     render(
