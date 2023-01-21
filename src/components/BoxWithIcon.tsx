@@ -5,7 +5,7 @@ const BoxWithIcon = ( { props }: { props: BoxWithIconProps } ) =>
 {
   return (
     <>
-      <div className={props.className}>
+      <div className="child">
         {props.link ?
           <p><a href={props.link} target="_blank" rel="noopener noreferrer">
             <img src={props.src} alt={props.alt}></img>

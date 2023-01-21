@@ -52,7 +52,7 @@ const Projects = () =>
           <div className="parent">
             {data?.repositoryOwner?.repositories?.nodes?.filter( f => !ignoredProjects.includes( f.name ) )
               .map( ( item ) => (
-                <ProjectsBox props={new ProjectsBoxProps( "child", item.name?.replaceAll( '-', ' ' ), terminal, "Terminal", item?.url, item?.stargazerCount, item?.forkCount )} key={item.name?.toLowerCase()} />
+                <ProjectsBox props={new ProjectsBoxProps( item.name?.replaceAll( '-', ' ' ), terminal, "Terminal", item?.url, item?.stargazerCount, item?.forkCount )} key={item.name?.toLowerCase()} />
               ) )}
           </div>
         </div>

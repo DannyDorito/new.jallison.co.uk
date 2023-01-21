@@ -6,7 +6,6 @@ export class ProjectsBoxProps extends BoxWithIconProps
   forkCount: number | undefined;
 
   constructor(
-    className: string | undefined,
     text: string,
     src: string,
     alt: string,
@@ -16,7 +15,6 @@ export class ProjectsBoxProps extends BoxWithIconProps
   )
   {
     super(
-      className,
       text,
       src,
       alt,
