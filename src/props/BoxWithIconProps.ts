@@ -1,20 +1,17 @@
 export class BoxWithIconProps
 {
   text: string;
-  src: string;
-  alt: string;
+  svg: any;
   link: string | undefined;
 
   constructor(
     text: string,
-    src: string,
-    alt: string,
+    svg: any,
     link: string | undefined
   )
   {
     this.text = text;
-    this.src = src;
-    this.alt = alt;
+    this.svg = svg
     this.link = link;
   }
 };

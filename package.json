@@ -18,6 +18,7 @@
     "web-vitals": "^3.0.3"
   },
   "devDependencies": {
+    "@svgr/cli": "^6.5.1",
     "@tsconfig/recommended": "^1.0.2",
     "@types/jest": "^29.2.5",
     "@types/react": "^18.0.27",
@@ -29,7 +30,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "update": "npm install --save-dev @types/react@latest @types/react-dom@latest && npm install react-router-dom && npm install react-scripts"
+    "update": "npm install --save-dev @types/react@latest @types/react-dom@latest && npm install react-router-dom && npm install react-scripts",
+    "svgs" : "npx @svgr/cli --typescript --out-dir src/svgs -- src/raw-svgs"
   },
   "browserslist": {
     "production": [

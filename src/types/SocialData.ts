@@ -1,52 +1,52 @@
-import twitter from '../icons/twitter.svg'
-import mail from '../icons/mail.svg';
-import github from '../icons/github.svg';
-import instagram from '../icons/instagram.svg';
-import filetext from '../icons/file-text.svg';
-import linkedin from '../icons/linkedin.svg';
-import youtube from '../icons/youtube.svg';
+import SvgTwitter from '../svgs/Twitter';
+import SvgMail from '../svgs/Mail';
+import SvgGithub from '../svgs/Github';
+import SvgInstagram from '../svgs/Instagram';
+import SvgFileText from '../svgs/FileText';
+import SvgLinkedin from '../svgs/Linkedin';
+import SvgYoutube from '../svgs/Youtube';
 
 export interface SocialData
 {
   platform: string;
-  icon: string;
+  icon: any;
   link: string;
 }
 
 export const socialData: SocialData[] = [
   {
     platform: 'Twitter',
-    icon: twitter,
+    icon: SvgTwitter,
     link: 'https://twitter.com/JohnAllis0n'
   },
   {
     platform: 'Email',
-    icon: mail,
+    icon: SvgMail,
     link: 'mailto:contact@jallison.co.uk'
   },
   {
     platform: 'GitHub',
-    icon: github,
+    icon: SvgGithub,
     link: 'https://github.com/DannyDorito'
   },
   {
     platform: 'Instagram',
-    icon: instagram,
+    icon: SvgInstagram,
     link: 'https://www.instagram.com/johnallis0n'
   },
   {
     platform: 'Resume',
-    icon: filetext,
+    icon: SvgFileText,
     link: 'https://docs.google.com/document/d/1zsnem12ZA2wqAPCwe3Y6CJdBgpnC0SpeCacsQYMILMQ/edit?usp=sharing'
   },
   {
     platform: 'LinkedIn',
-    icon: linkedin,
+    icon: SvgLinkedin,
     link: 'https://www.linkedin.com/in/johnallison-'
   },
   {
     platform: 'YouTube',
-    icon: youtube,
+    icon: SvgYoutube,
     link: 'https://youtube.com/@JohnAllis0n'
   }
 ];

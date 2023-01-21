@@ -7,8 +7,7 @@ export class ProjectsBoxProps extends BoxWithIconProps
 
   constructor(
     text: string,
-    src: string,
-    alt: string,
+    svg: any,
     link: string | undefined,
     stargazerCount: number | undefined,
     forkCount: number | undefined
@@ -16,8 +15,7 @@ export class ProjectsBoxProps extends BoxWithIconProps
   {
     super(
       text,
-      src,
-      alt,
+      svg,
       link );
     this.stargazerCount = stargazerCount;
     this.forkCount = forkCount;
