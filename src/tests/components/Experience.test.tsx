@@ -35,6 +35,21 @@ describe( "When the page is rendered", () =>
       expect(
         await screen.findByText( expected.workFromHome )
       ).toBeInTheDocument();
+
+      expect(
+        await screen.findByText( `${ expected.startDate.toLocaleString( 'default', { month: 'long' } ) } ${ expected.startDate.getFullYear() } -` )
+      ).toBeInTheDocument();
+
+      expect(
+        await screen.findAllByText( expected.endDate ? `${ expected.endDate?.toLocaleString( 'default', { month: 'long' } ) } ${ expected.endDate?.getFullYear() }` : 'Present' )
+      )
+
+      expected.additionalInformation.forEach( async expectedInfo =>
+      {
+        expect(
+          await screen.findByText( expectedInfo )
+        ).toBeInTheDocument();
+      } )
     } )
   } );
 } );
