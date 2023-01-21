@@ -1,0 +1,11 @@
+@use '../Variables' as v;
+@use '../_Main.scss';
+
+p.awards {
+  margin: 0;
+  text-align: center;
+}
+
+p.awards:last-of-type {
+  margin-bottom: 24px;
+}

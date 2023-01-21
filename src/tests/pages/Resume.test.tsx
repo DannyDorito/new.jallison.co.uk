@@ -19,5 +19,13 @@ describe( "When the page is rendered", () =>
     expect(
       await screen.findByText( "Education" )
     ).toBeInTheDocument();
+
+    expect(
+      await screen.findByText( "Experience" )
+    ).toBeInTheDocument();
+
+    expect(
+      await screen.findByText( "Awards" )
+    ).toBeInTheDocument();
   } )
 } );
