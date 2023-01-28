@@ -49,9 +49,7 @@ const client = new ApolloClient( {
 
 root.render(
   <ApolloProvider client={client}>
-    <React.StrictMode>
       <Router />
-    </React.StrictMode>
   </ApolloProvider>
 );
 
