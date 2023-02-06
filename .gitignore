@@ -24,3 +24,4 @@ yarn-error.log*
 .env
 cert/key.pem
 cert/cert.pem
+.env.development
