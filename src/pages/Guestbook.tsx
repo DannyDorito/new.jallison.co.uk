@@ -7,7 +7,7 @@ import "../scss/pages/Guestbook.scss";
 
 const Guestbook = () =>
 {
-  let [ darkMode, setDarkMode ] = useLocalStorage( "darkMode", preferDarkMode() );
+  let [ darkMode ] = useLocalStorage( "darkMode", preferDarkMode() );
 
   const [ comment, setComment ] = useState<string>( "" );
   const [ username, setUsername ] = useState<string>( "" );
@@ -54,13 +54,12 @@ const Guestbook = () =>
   const handleComment = async ( event: FormEvent<HTMLFormElement> ) =>
   {
     event.preventDefault();
-
-    if ( !turnstileCaptchaComplete )
+    if ( !!comment && !!username )
     {
-      setShowTurnstileCaptcha( true );
-    } else
-    {
-      if ( !!comment && !!username )
+      if ( !turnstileCaptchaComplete )
+      {
+        setShowTurnstileCaptcha( true );
+      } else
       {
         try
         {
@@ -75,22 +74,24 @@ const Guestbook = () =>
           );
           if ( response.ok )
           {
+            // TODO: only add comment if it does not already exist
             setComments( ( comments ) => [
               ...comments,
               new GuestbookEntry( comment, username ),
             ] );
             updateComment( "" );
+            updateUsername( "" );
           }
         } catch ( error )
         {
           //TODO: notify user better
           console.error( error );
         }
-      } else
-      {
-        // TODO: notify user better
-        console.warn( "Guestbook comment is blank" );
       }
+    } else
+    {
+      // TODO: notify user better
+      console.warn( "Guestbook comment or username is blank" );
     }
   };
 
@@ -141,6 +142,7 @@ const Guestbook = () =>
           ></input>
           {showTurnstileCaptcha ?
             <Turnstile
+              className="turnstile"
               siteKey={`${ process.env.REACT_APP_TURNSTILE_SITE_KEY }`}
               onSuccess={turnstileSuccess}
               onError={turnstileErrorOrExpire}
