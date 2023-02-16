@@ -10,6 +10,7 @@ import Projects from '../pages/Projects';
 import Resume from '../pages/Resume';
 import Footer from './Footer';
 import About from '../pages/About';
+import Guestbook from '../pages/Guestbook';
 import '../scss/components/RouterSetup.scss';
 
 const RouterSetup = () =>
@@ -31,6 +32,7 @@ const RouterSetup = () =>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
             <Route path='/contact' element={<Contact />} />
+            <Route path='/guestbook' element={<Guestbook />} />
             <Route path='/projects' element={<Projects />} />
             <Route path='/resume' element={<Resume />} />
             <Route path='*' element={<NotFound />} />
