@@ -21,6 +21,10 @@ describe( "When page is rendered", () =>
     ).toBeInTheDocument();
 
     expect(
+      await screen.findByText( "Guestbook" )
+    ).toBeInTheDocument();
+
+    expect(
       await screen.findByText( "Projects" )
     ).toBeInTheDocument();
 
