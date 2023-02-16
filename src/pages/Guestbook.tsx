@@ -121,7 +121,7 @@ const Guestbook = () =>
     <>
       <div>
         <h1 className="no-select">Guestbook</h1>
-        <h2 className="no-select">Leave a comment below!</h2>
+        <h2 className="no-select">Leave a comment below! | This feature is currently WIP check back later!</h2>
         {comments.map( ( guestBookEntry ) => (
           <p key={guestBookEntry.id}>
             {guestBookEntry.message} by: {guestBookEntry.createdBy}
