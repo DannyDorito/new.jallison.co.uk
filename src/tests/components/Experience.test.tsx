@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import Experience from "../../components/Experience";
-import { experience } from "../../types/ExperienceData";
+import { experience } from "../../data/ExperienceData";
 
 describe( "When the page is rendered", () =>
 {

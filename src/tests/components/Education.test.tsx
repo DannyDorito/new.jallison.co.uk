@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import Education from "../../components/Education";
-import { education } from "../../types/EducationData";
+import { education } from "../../data/EducationData";
 
 describe( "When the page is rendered", () =>
 {

@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import { awards } from "../../types/AwardsData";
+import { awards } from "../../data/AwardsData";
 import Awards from "../../components/Awards";
 
 describe( "When the page is rendered", () =>

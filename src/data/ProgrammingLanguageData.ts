@@ -56,6 +56,10 @@ export const javascriptFrameworks: Skills[] = [
     name: 'Angular Material',
     proficiency: 3
   },
+  {
+    name: 'Knockout.js',
+    proficiency: 5
+  }
 ];
 
 export const devops: Skills[] = [

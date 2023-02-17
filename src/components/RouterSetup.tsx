@@ -9,7 +9,6 @@ import NotFound from './NotFound';
 import Projects from '../pages/Projects';
 import Resume from '../pages/Resume';
 import Footer from './Footer';
-import About from '../pages/About';
 import Guestbook from '../pages/Guestbook';
 import '../scss/components/RouterSetup.scss';
 
@@ -30,7 +29,6 @@ const RouterSetup = () =>
           <Routes>
             {/* Adding a route, also add to Nav.tsx and sitemap.xml */}
             <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/guestbook' element={<Guestbook />} />
             <Route path='/projects' element={<Projects />} />

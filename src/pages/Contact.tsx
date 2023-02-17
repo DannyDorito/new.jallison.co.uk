@@ -1,4 +1,4 @@
-import { socialData } from '../types/SocialData';
+import { socialData } from '../data/SocialData';
 import BoxWithIcon from '../components/BoxWithIcon';
 import '../scss/pages/Contact.scss';
 

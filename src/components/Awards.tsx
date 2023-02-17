@@ -1,4 +1,4 @@
-import { awards } from "../types/AwardsData";
+import { awards } from "../data/AwardsData";
 import '../scss/components/Awards.scss';
 
 const Awards = () =>

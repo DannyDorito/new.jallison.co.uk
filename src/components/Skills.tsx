@@ -1,4 +1,4 @@
-import { devops, javascriptFrameworks, programmingLanguages } from "../types/ProgrammingLanguageData";
+import { devops, javascriptFrameworks, programmingLanguages } from "../data/ProgrammingLanguageData";
 import '../scss/components/Skills.scss';
 
 const Skills = () =>

@@ -1,4 +1,4 @@
-import { education } from "../types/EducationData";
+import { education } from "../data/EducationData";
 import '../scss/components/Education.scss';
 
 const Education = () =>
