@@ -1,20 +1,21 @@
 @use '../Variables' as v;
-@use '../_Main.scss';
 
-div.child {
+.parent {
   all: unset;
-  width: 40%;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-content: stretch;
 }
 
 div.child:nth-last-child(1):nth-child(odd) {
   width: 80%;
 }
 
-svg {
+svg.icon {
   max-width: 24px;
   padding-right: 10px;
   padding-left: 10px;
-  object-fit: cover;
-  vertical-align: text-top;
+  overflow: hidden;;
 }

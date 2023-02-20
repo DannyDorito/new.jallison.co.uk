@@ -4,7 +4,7 @@ import { useLocalStorage } from '../helpers/UseLocalStorage';
 import { preferDarkMode } from '../helpers/PreferDarkMode';
 import Wrapper from '../pages/Wrapper';
 import NotFound from './NotFound';
-// import '../scss/components/RouterSetup.scss';
+import '../scss/components/RouterSetup.scss';
 
 const RouterSetup = () =>
 {
