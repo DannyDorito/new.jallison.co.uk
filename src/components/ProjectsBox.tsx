@@ -1,5 +1,4 @@
 import { ProjectsBoxProps } from "../props/ProjectsBoxProps";
-import '../scss/components/ProjectsBox.scss';
 import SvgStar from "../svgs/Star";
 import SvgShare2 from "../svgs/Share2";
 
