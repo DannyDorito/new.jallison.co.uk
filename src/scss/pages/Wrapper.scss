@@ -18,10 +18,24 @@
   }
 }
 
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+html,
 body {
   margin: 0;
   font-family: v.$pallet-font-style, monospace;
   font-size: v.$pallet-font-size;
+  word-spacing: -5px;
+  scroll-behavior: smooth;
 }
 
 section {
@@ -51,11 +65,11 @@ section:last-of-type {
 }
 
 .dark {
-  background: #1f1f1f;
-  color: white;
+  background: v.$pallet-dark;
+  color: v.$pallet-white;
 }
 
-.blue-shape {
+.blue-shape-top {
   position: absolute;
   top: 0;
   left: 0;
@@ -64,18 +78,18 @@ section:last-of-type {
   line-height: 0;
 }
 
-.blue-shape svg {
+.blue-shape-top svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
   height: 100px;
 }
 
-.blue-shape .shape-fill {
+.blue-shape-top .shape-fill {
   fill: #3C31DD;
 }
 
-.red-shape {
+.blue-shape-bottom {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -85,26 +99,84 @@ section:last-of-type {
   transform: rotate(180deg);
 }
 
-.red-shape svg {
+.blue-shape-bottom svg {
   position: relative;
   display: block;
-  width: calc(171% + 1.3px);
-  height: 150px;
+  width: calc(102% + 1.3px);
+  height: 93px;
+  transform: rotateY(180deg);
 }
 
-.red-shape .shape-fill {
+.blue-shape-bottom .shape-fill {
+  fill: #3C31DD;
+}
+
+.red-shape-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.red-shape-top svg {
+  position: relative;
+  display: block;
+  width: calc(102% + 1.3px);
+  height: 93px;
+  transform: rotateY(180deg);
+}
+
+.red-shape-top .shape-fill {
   fill: #DD3F31;
 }
 
-.flip {
-  transform: rotate(180deg);
+.red-curve-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 
-.spacer {
-  aspect-ratio: 960/300;
+.red-curve-top svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 70px;
+}
+
+.red-curve-top .shape-fill {
+  fill: #DD3F31;
+}
+
+.dark-shape-top {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.dark-shape-top svg {
+  position: relative;
+  display: block;
+  width: calc(102% + 1.3px);
+  height: 93px;
+}
+
+.dark-shape-top .shape-fill {
+  fill: v.$pallet-dark;
+}
+
+.blobs-background {
+  aspect-ratio: 960/300;
+  width: calc(100% - 20vw);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url(../../svgs/blob-scene-haikei.svg);
+  background-image: url('../../svgs/blob-background.svg');
 }

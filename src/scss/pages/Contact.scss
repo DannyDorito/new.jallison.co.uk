@@ -1,15 +1,5 @@
 @use '../_Variables.scss' as v;
-@use '../_Main.scss';
 
-h1,a {
+.dark h1,a {
   color: v.$pallet-white;
-}
-
-.spacer {
-  aspect-ratio: 960/300;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-image: url(../../svgs/blob-scene-haikei.svg);
 }
