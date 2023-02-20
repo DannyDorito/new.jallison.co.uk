@@ -1,5 +1,5 @@
 import { BoxWithIconProps } from "../props/BoxWithIconProps";
-import '../scss/components/BoxWithIcon.scss';
+// import '../scss/components/BoxWithIcon.scss';
 
 const BoxWithIcon = ( { props }: { props: BoxWithIconProps } ) =>
 {
