@@ -1,3 +1,9 @@
-@use '../Variables' as v;
-@use '../_Main.scss';
+@use '../_Variables.scss' as v;
 @use './BoxWithIcon.scss';
+
+section,
+a,
+p,
+div {
+  color: white;
+}

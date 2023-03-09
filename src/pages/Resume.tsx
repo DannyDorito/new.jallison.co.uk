@@ -8,10 +8,10 @@ const Resume = () =>
 {
   return (
     <>
-      <Skills />
-      <Education />
-      <Experience />
-      <Awards />
+        <Skills />
+        <Education />
+        <Experience />
+        <Awards />
     </>
   )
 };

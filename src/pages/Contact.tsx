@@ -1,19 +1,16 @@
 import { socialData } from '../data/SocialData';
 import BoxWithIcon from '../components/BoxWithIcon';
-import '../scss/pages/Contact.scss';
-
-const Contact = () =>
+import "../scss/pages/Contact.scss"
+const Contact = ( ) =>
 {
   return (
     <>
-      <div>
         <h1 className='no-select'>Contact me</h1>
         <div className="parent">
           {socialData.map( ( social ) => (
             <BoxWithIcon props={{ text: social.platform, svg: social.icon, link: social.link }} key={social.platform.toLowerCase()} />
           ) )}
         </div>
-      </div>
     </>
   );
 };

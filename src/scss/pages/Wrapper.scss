@@ -1,0 +1,181 @@
+@use '../Variables.scss' as v;
+
+@font-face {
+  font-family: v.$pallet-font-style, monospace;
+  src: url('../../fonts/FiraCode-VF.ttf') format('truetype');
+
+  @supports (font-variation-settings: normal) {
+    code {
+      font-family: v.$pallet-font-style-vf, monospace;
+    }
+  }
+
+  @media all and (-ms-high-contrast: none),
+  (-ms-high-contrast: active) {
+    .ie10up {
+      font-feature-settings: "calt";
+    }
+  }
+}
+
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: v.$pallet-font-style, monospace;
+  font-size: v.$pallet-font-size;
+  scroll-behavior: smooth;
+}
+
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 500px;
+  padding: 100px 10vw;
+}
+
+section:last-of-type {
+  padding: 0;
+  min-height: auto;
+}
+
+.blue {
+  background: #3c31dd;
+}
+
+.red {
+  background: #dd3f31;
+}
+
+.pink {
+  background: #ff0066;
+}
+
+.dark {
+  background: v.$pallet-dark;
+  color: v.$pallet-white;
+}
+
+.blue-shape-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.blue-shape-top svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100px;
+}
+
+.blue-shape-top .shape-fill {
+  fill: #3C31DD;
+}
+
+.blue-shape-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.blue-shape-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(102% + 1.3px);
+  height: 93px;
+  transform: rotateY(180deg);
+}
+
+.blue-shape-bottom .shape-fill {
+  fill: #3C31DD;
+}
+
+.red-shape-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.red-shape-top svg {
+  position: relative;
+  display: block;
+  width: calc(102% + 1.3px);
+  height: 93px;
+  transform: rotateY(180deg);
+}
+
+.red-shape-top .shape-fill {
+  fill: #DD3F31;
+}
+
+.red-curve-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.red-curve-top svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 70px;
+}
+
+.red-curve-top .shape-fill {
+  fill: #DD3F31;
+}
+
+.dark-shape-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.dark-shape-top svg {
+  position: relative;
+  display: block;
+  width: calc(102% + 1.3px);
+  height: 93px;
+}
+
+.dark-shape-top .shape-fill {
+  fill: v.$pallet-dark;
+}
+
+.blobs-background {
+  aspect-ratio: 960/300;
+  width: calc(100% - 20vw);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../../svgs/blob-background.svg');
+}

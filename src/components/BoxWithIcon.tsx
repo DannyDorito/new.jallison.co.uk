@@ -8,7 +8,7 @@ const BoxWithIcon = ( { props }: { props: BoxWithIconProps } ) =>
       <div className="child">
         {props.link ?
           <p><a href={props.link} target="_blank" rel="noopener noreferrer">
-            <props.svg />{props.text}
+            <props.svg className="icon" />{props.text}
           </a>
           </p> : <p>{props.text}</p>}
       </div>

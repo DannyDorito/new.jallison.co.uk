@@ -1,2 +1,5 @@
 @use '../_Variables.scss' as v;
-@use '../_Main.scss';
+
+.dark h1,a {
+  color: v.$pallet-white;
+}

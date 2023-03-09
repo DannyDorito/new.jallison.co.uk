@@ -1,14 +1,10 @@
 import { Turnstile } from "@marsidev/react-turnstile";
 import { FormEvent, useEffect, useState } from "react";
 import { GuestbookEntry } from "../types/Guestbook";
-import { useLocalStorage } from "../helpers/UseLocalStorage";
-import { preferDarkMode } from "../helpers/PreferDarkMode";
 import "../scss/pages/Guestbook.scss";
 
-const Guestbook = () =>
+const Guestbook = ( { darkMode }: { darkMode: any } ) =>
 {
-  let [ darkMode ] = useLocalStorage( "darkMode", preferDarkMode() );
-
   const [ comment, setComment ] = useState<string>( "" );
   const [ username, setUsername ] = useState<string>( "" );
   const [ comments, setComments ] = useState<GuestbookEntry[]>( [] );
@@ -119,41 +115,39 @@ const Guestbook = () =>
 
   return (
     <>
-      <div>
-        <h1 className="no-select">Guestbook</h1>
-        <h2 className="no-select">Leave a comment below! | This feature is currently WIP check back later!</h2>
-        {comments.map( ( guestBookEntry ) => (
-          <p key={guestBookEntry.id}>
-            {guestBookEntry.message} by: {guestBookEntry.createdBy}
-          </p>
-        ) )}
-        <form onSubmit={handleComment}>
-          <label>Comment</label>
-          <input
-            type="text"
-            id="comment"
-            onChange={( event ) => updateComment( event.target.value )}
-          ></input>
-          <label>Name</label>
-          <input
-            type="text"
-            id="username"
-            onChange={( event ) => updateUsername( event.target.value )}
-          ></input>
-          {showTurnstileCaptcha ?
-            <Turnstile
-              className="turnstile"
-              siteKey={`${ process.env.REACT_APP_TURNSTILE_SITE_KEY }`}
-              onSuccess={turnstileSuccess}
-              onError={turnstileErrorOrExpire}
-              onExpire={turnstileErrorOrExpire}
-              options={{
-                theme: darkMode ? "dark" : "light"
-              }}
-            /> : <div></div>}
-          <input type="submit" />
-        </form>
-      </div>
+      <h1 className="no-select">Guestbook</h1>
+      <h2 className="no-select">Leave a comment below! | This feature is currently WIP check back later!</h2>
+      {comments.map( ( guestBookEntry ) => (
+        <p key={guestBookEntry.id}>
+          {guestBookEntry.message} by: {guestBookEntry.createdBy}
+        </p>
+      ) )}
+      <form onSubmit={handleComment}>
+        <label>Comment</label>
+        <input
+          type="text"
+          id="comment"
+          onChange={( event ) => updateComment( event.target.value )}
+        ></input>
+        <label>Name</label>
+        <input
+          type="text"
+          id="username"
+          onChange={( event ) => updateUsername( event.target.value )}
+        ></input>
+        {showTurnstileCaptcha ?
+          <Turnstile
+            className="turnstile"
+            siteKey={`${ process.env.REACT_APP_TURNSTILE_SITE_KEY }`}
+            onSuccess={turnstileSuccess}
+            onError={turnstileErrorOrExpire}
+            onExpire={turnstileErrorOrExpire}
+            options={{
+              theme: darkMode ? "dark" : "light"
+            }}
+          /> : <div></div>}
+        <input type="submit" />
+      </form>
     </>
   );
 };
