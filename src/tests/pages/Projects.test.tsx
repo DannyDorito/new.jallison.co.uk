@@ -21,9 +21,16 @@ describe( "When the page is rendered", () =>
       },
       result: {
         data: {
-          user: {
-            bio: "Test Bio",
-            __typename: "User"
+          repositoryOwner: {
+            repositories: {
+              nodes: [ {
+                name: "test-name",
+                url: "https://example.com",
+                stargazerCount: 1,
+                forkCount: 1,
+                __typename: "Node",
+              } ]
+            }
           }
         }
       }
