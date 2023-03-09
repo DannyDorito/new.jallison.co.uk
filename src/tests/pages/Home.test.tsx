@@ -7,26 +7,7 @@ import { GraphQLError } from "graphql/error/GraphQLError";
 
 describe( "When the page is rendered", () =>
 {
-  it( "should render <Home /> JSX component", async () =>
-  {
-    render(
-      <MockedProvider mocks={[]} addTypename={false}>
-        <MemoryRouter>
-          <Home />
-        </MemoryRouter>
-      </MockedProvider>
-    );
-
-    expect(
-      await screen.findByText( "..." )
-    ).toBeInTheDocument();
-
-    expect(
-      await screen.findByText( "John Allison" )
-    ).toBeInTheDocument();
-  } );
-
-  it( "should display a mocked bio response from apollo client on the component", async () =>
+  it( "should render <Home /> JSX component should display a mocked bio response from apollo client on the component", async () =>
   {
     const mocks: ReadonlyArray<MockedResponse> = [ {
       request: {
