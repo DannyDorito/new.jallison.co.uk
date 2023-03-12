@@ -2,7 +2,6 @@ import Footer from "../components/Footer";
 import { preferDarkMode } from "../helpers/PreferDarkMode";
 import { useLocalStorage } from "../helpers/UseLocalStorage";
 import Contact from "./Contact";
-import Guestbook from "./Guestbook";
 import Home from "./Home";
 import Projects from "./Projects";
 import Resume from "./Resume";
@@ -18,17 +17,11 @@ const Wrapper = () =>
   }
   return (
     <>
-      {/* <Home className="blue"/>
-      <Projects className="dark"/>
-      <Resume/>
-      <Contact className="dark"/>
-      <Guestbook darkMode={darkMode} className="pink"/>
-      <Footer onClick={toggleDarkMode} darkMode={darkMode} /> */}
-      <section className="blue">
+      <section className="blue" data-testid="section-1">
         <Home />
       </section>
 
-      <section className="dark">
+      <section className="dark" data-testid="section-2">
         <div className="blue-shape-top">
           <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" className="shape-fill"></path>
@@ -39,7 +32,7 @@ const Wrapper = () =>
         <Projects className="dark" />
       </section>
 
-      <section className="red">
+      <section className="red" data-testid="section-3">
         <div className="dark-shape-top">
           <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" className="shape-fill"></path>
@@ -50,7 +43,7 @@ const Wrapper = () =>
         <Resume />
       </section>
 
-      <section className="dark blobs-background">
+      <section className="dark blobs-background" data-testid="section-4">
         <div className="red-curve-top">
           <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" className="shape-fill"></path>
@@ -68,11 +61,7 @@ const Wrapper = () =>
         </div>
       </section>
 
-      <section className="blue">
-        <Guestbook darkMode={darkMode} />
-      </section>
-
-      <section className="dark">
+      <section className="dark" data-testid="section-5">
         <Footer onClick={toggleDarkMode} darkMode={darkMode} />
       </section>
     </>
