@@ -21,7 +21,7 @@
     "web-vitals": "^3.3.0"
   },
   "devDependencies": {
-    "@svgr/cli": "^6.5.1",
+    "@svgr/cli": "^7.0.0",
     "@tsconfig/recommended": "^1.0.2",
     "@types/jest": "^29.5.0",
     "@types/react": "^18.0.30",
