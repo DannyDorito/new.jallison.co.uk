@@ -3,10 +3,10 @@ import { onError } from '@apollo/client/link/error';
 import { RetryLink } from '@apollo/client/link/retry';
 import { LocalStorageWrapper } from 'apollo3-cache-persist/lib/storageWrappers';
 import { persistCacheSync } from 'apollo3-cache-persist/lib/persistCacheSync';
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Router from './components/RouterSetup';
 import reportWebVitals from './reportWebVitals';
+import { inject } from '@vercel/analytics';
 
 const root = ReactDOM.createRoot( document.getElementById( 'root' ) as HTMLElement );
 
@@ -46,6 +46,8 @@ const client = new ApolloClient( {
   link: from( [ errorLink, retryLink, httpLink ] ),
   cache: cache,
 } );
+
+inject();
 
 root.render(
   <ApolloProvider client={client}>

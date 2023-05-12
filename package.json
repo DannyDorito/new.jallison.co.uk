@@ -8,6 +8,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
+    "@vercel/analytics": "^1.0.1",
     "apollo3-cache-persist": "^0.14.1",
     "graphql": "^16.6.0",
     "jest": "^29.5.0",
