@@ -19,5 +19,4 @@ interface RepositoryNode
   url: string;
   stargazerCount: number | undefined;
   forkCount: number | undefined;
-  __typename?: string;
 }

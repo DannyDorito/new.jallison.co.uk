@@ -20,7 +20,7 @@ describe( "When the page is rendered", () =>
         data: {
           user: {
             bio: "Test Bio",
-            __typename: "User"
+            pronouns: "they/them"
           }
         }
       }
@@ -40,6 +40,10 @@ describe( "When the page is rendered", () =>
 
     expect(
       await screen.findByText( "Test Bio" )
+    ).toBeInTheDocument();
+
+    expect(
+      await screen.findByText( "they/them" )
     ).toBeInTheDocument();
 
     expect(

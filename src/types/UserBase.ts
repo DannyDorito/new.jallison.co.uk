@@ -6,5 +6,5 @@ export interface UserBase
 interface User
 {
   bio: string;
-  __typename: string;
+  pronouns: string;
 }

@@ -20,7 +20,7 @@ describe( "When the page is initially loaded", () =>
         data: {
           user: {
             bio: "Test Bio",
-            __typename: "User"
+            pronouns: "they/them"
           }
         }
       }
@@ -44,7 +44,6 @@ describe( "When the page is initially loaded", () =>
                 url: "https://example.com",
                 stargazerCount: 1,
                 forkCount: 1,
-                __typename: "Node",
               } ]
             }
           }
