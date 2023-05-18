@@ -1,6 +1,6 @@
 import Footer from "../components/Footer";
 import { preferDarkMode } from "../helpers/PreferDarkMode";
-import { useLocalStorage } from "../helpers/UseLocalStorage";
+import { useLocalStorage } from 'usehooks-ts';
 import Contact from "./Contact";
 import Home from "./Home";
 import Projects from "./Projects";

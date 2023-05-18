@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useLocalStorage } from '../helpers/UseLocalStorage';
+import { useLocalStorage } from 'usehooks-ts';
 import { preferDarkMode } from '../helpers/PreferDarkMode';
 import Wrapper from '../pages/Wrapper';
 import NotFound from './NotFound';
