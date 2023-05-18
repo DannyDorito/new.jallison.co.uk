@@ -1,22 +1,17 @@
 import { Fragment } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useLocalStorage } from 'usehooks-ts';
-import { preferDarkMode } from '../helpers/PreferDarkMode';
+import { useDarkMode } from 'usehooks-ts'
 import Wrapper from '../pages/Wrapper';
 import NotFound from './NotFound';
 import '../scss/components/RouterSetup.scss';
 
 const RouterSetup = () =>
 {
-  let [ darkMode, setDarkMode ] = useLocalStorage( "darkMode", preferDarkMode() );
+  const { isDarkMode, toggle, enable, disable } = useDarkMode();
 
-  function toggleDarkMode ()
-  {
-    setDarkMode( !darkMode );
-  }
 
   return (
-    <div className={darkMode ? 'pallet-dark' : 'pallet-light'}>
+    <div className={isDarkMode ? 'pallet-dark' : 'pallet-light'}>
       <Router>
         <Fragment>
           <Routes>
