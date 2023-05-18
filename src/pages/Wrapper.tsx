@@ -1,6 +1,5 @@
 import Footer from "../components/Footer";
-import { preferDarkMode } from "../helpers/PreferDarkMode";
-import { useLocalStorage } from 'usehooks-ts';
+import { useDarkMode } from 'usehooks-ts'
 import Contact from "./Contact";
 import Home from "./Home";
 import Projects from "./Projects";
@@ -9,12 +8,8 @@ import '../scss/pages/Wrapper.scss';
 
 const Wrapper = () =>
 {
-  let [ darkMode, setDarkMode ] = useLocalStorage( "darkMode", preferDarkMode() );
+  const { isDarkMode, toggle, enable, disable } = useDarkMode();
 
-  function toggleDarkMode ()
-  {
-    setDarkMode( !darkMode );
-  }
   return (
     <>
       <section className="blue" data-testid="section-1">
@@ -55,7 +50,7 @@ const Wrapper = () =>
       </section>
 
       <section className="dark" data-testid="section-5">
-        <Footer onClick={toggleDarkMode} darkMode={darkMode} />
+        <Footer onClick={toggle} darkMode={isDarkMode} />
       </section>
     </>
 

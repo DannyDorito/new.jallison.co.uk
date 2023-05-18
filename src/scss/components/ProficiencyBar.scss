@@ -1,0 +1,19 @@
+@use '../_Variables.scss' as v;
+
+.proficiency-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px
+}
+.proficiency-outer-bar {
+  border: 2px solid black;
+  padding: 5px;
+  width: 100px;
+}
+
+.proficiency-inner-bar {
+  border-style: solid;
+  border-width: 2px;
+  background-color: black;
+  height: 14px;
+}

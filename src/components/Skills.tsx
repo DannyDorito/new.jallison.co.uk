@@ -1,5 +1,5 @@
 import { devops, javascriptFrameworks, programmingLanguages } from "../data/ProgrammingLanguageData";
-import { proficiencyBar } from "../helpers/ProficiencyBar";
+import ProficiencyBar from "./ProficiencyBar";
 import '../scss/components/Skills.scss';
 
 const Skills = () =>
@@ -11,8 +11,7 @@ const Skills = () =>
       <ul className="skill-list">
         {programmingLanguages.map( ( language ) => (
           <li key={language.name}>
-            {language.name}
-            {proficiencyBar(language.proficiency)}
+            <ProficiencyBar props={{ percent: language.proficiency, name: language.name}}/>
           </li>
         ) )}
       </ul>
@@ -20,8 +19,7 @@ const Skills = () =>
       <ul className="skill-list">
         {javascriptFrameworks.map( ( framework ) => (
           <li key={framework.name}>
-            {framework.name}
-            {proficiencyBar(framework.proficiency)}
+            <ProficiencyBar props={{ percent: framework.proficiency, name: framework.name}}/>
           </li>
         ) )}
       </ul>
@@ -29,8 +27,7 @@ const Skills = () =>
       <ul className="skill-list">
         {devops.map( ( devops ) => (
           <li key={devops.name}>
-            {devops.name}
-            {proficiencyBar(devops.proficiency)}
+            <ProficiencyBar props={{ percent: devops.proficiency, name: devops.name}}/>
           </li>
         ) )}
       </ul>
