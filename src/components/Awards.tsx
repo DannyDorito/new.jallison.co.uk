@@ -1,22 +1,18 @@
-import { awards } from "../data/AwardsData";
+import { awards } from '../data/AwardsData';
 import '../scss/components/Awards.scss';
 
-const Awards = () =>
-{
+const Awards = () => {
   return (
     <>
       <h1 className='no-select'>Awards</h1>
-      {awards.map( ( award ) =>
-      (
+      {awards.map((award) => (
         <div key={award.key} className='awards'>
           <h2>{award.name}</h2>
-          <p className='awards'>
-            {award.additionalInformation}
-          </p>
+          <p className='awards'>{award.additionalInformation}</p>
         </div>
-      ) )}
+      ))}
     </>
   );
-}
+};
 
 export default Awards;

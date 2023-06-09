@@ -1,7 +1,6 @@
-import { SVGProps } from "react";
+import { SVGProps } from 'react';
 
-export class BoxWithIconProps
-{
+export class BoxWithIconProps {
   text: string;
   svg: (props: SVGProps<SVGSVGElement>) => JSX.Element;
   link: string | undefined;
@@ -11,12 +10,11 @@ export class BoxWithIconProps
     text: string,
     svg: (props: SVGProps<SVGSVGElement>) => JSX.Element,
     link: string | undefined,
-    className?: string
-  )
-  {
+    className?: string,
+  ) {
     this.text = text;
-    this.svg = svg
+    this.svg = svg;
     this.link = link;
     this.className = className;
   }
-};
+}

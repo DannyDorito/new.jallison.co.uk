@@ -8,51 +8,48 @@ import Router from './components/RouterSetup';
 import reportWebVitals from './reportWebVitals';
 import { inject } from '@vercel/analytics';
 
-const root = ReactDOM.createRoot( document.getElementById( 'root' ) as HTMLElement );
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 const GITHUB_BASE_URL = 'https://api.github.com/graphql';
 
-const httpLink = new HttpLink( {
+const httpLink = new HttpLink({
   uri: GITHUB_BASE_URL,
   headers: {
-    authorization: `Bearer ${ process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN }`
-  }
-} );
+    authorization: `Bearer ${process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN}`,
+  },
+});
 
-const errorLink = onError( ( { graphQLErrors, networkError } ) =>
-{
-  if ( graphQLErrors )
-  {
-    graphQLErrors.forEach( ( { message, locations, path } ) =>
-      console.error( `[GraphQL error]: Message: ${ message }, Location: ${ locations }, Path: ${ path }` )
+const errorLink = onError(({ graphQLErrors, networkError }) => {
+  if (graphQLErrors) {
+    graphQLErrors.forEach(({ message, locations, path }) =>
+      console.error(`[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`),
     );
   }
 
-  if ( networkError )
-  {
-    console.error( `[Network error]: ${ networkError }` );
+  if (networkError) {
+    console.error(`[Network error]: ${networkError}`);
   }
-} );
+});
 
 const retryLink = new RetryLink();
 const cache = new InMemoryCache();
 
-persistCacheSync( {
+persistCacheSync({
   cache,
-  storage: new LocalStorageWrapper( window.localStorage ),
-} )
+  storage: new LocalStorageWrapper(window.localStorage),
+});
 
-const client = new ApolloClient( {
-  link: from( [ errorLink, retryLink, httpLink ] ),
+const client = new ApolloClient({
+  link: from([errorLink, retryLink, httpLink]),
   cache: cache,
-} );
+});
 
 inject();
 
 root.render(
   <ApolloProvider client={client}>
     <Router />
-  </ApolloProvider>
+  </ApolloProvider>,
 );
 
 // If you want to start measuring performance in your app, pass a function

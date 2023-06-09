@@ -10,10 +10,9 @@
     }
   }
 
-  @media all and (-ms-high-contrast: none),
-  (-ms-high-contrast: active) {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .ie10up {
-      font-feature-settings: "calt";
+      font-feature-settings: 'calt';
     }
   }
 
@@ -55,15 +54,15 @@ section:last-of-type {
 }
 
 .blue {
-  background: #54DEFD;
+  background: #54defd;
 }
 
 .red {
-  background: #DA344D;
+  background: #da344d;
 }
 
 .pink {
-  background: #F564A9;
+  background: #f564a9;
 }
 
 .dark {
@@ -88,7 +87,7 @@ section:last-of-type {
 }
 
 .blue-shape-top .shape-fill {
-  fill: #54DEFD;
+  fill: #54defd;
 }
 
 .red-shape-top {
@@ -109,7 +108,7 @@ section:last-of-type {
 }
 
 .red-shape-top .shape-fill {
-  fill: #DA344D;
+  fill: #da344d;
 }
 
 .red-curve-top {
@@ -129,7 +128,7 @@ section:last-of-type {
 }
 
 .red-curve-top .shape-fill {
-  fill: #DA344D;
+  fill: #da344d;
 }
 
 .dark-shape-top {

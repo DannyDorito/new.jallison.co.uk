@@ -1,23 +1,17 @@
-import { render, screen } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
-import NotFound from "../../components/NotFound";
+import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
+import NotFound from '../../components/NotFound';
 
-describe( "When page is rendered", () =>
-{
-  it( "should render <NotFound /> JSX component", async () =>
-  {
+describe('When page is rendered', () => {
+  it('should render <NotFound /> JSX component', async () => {
     render(
       <MemoryRouter>
         <NotFound />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
-    expect(
-      await screen.findByText( "Not Found!" )
-    ).toBeInTheDocument();
+    expect(await screen.findByText('Not Found!')).toBeInTheDocument();
 
-    expect(
-      await screen.findByText( "Go Home" )
-    ).toBeInTheDocument();
-  } );
-} );
+    expect(await screen.findByText('Go Home')).toBeInTheDocument();
+  });
+});

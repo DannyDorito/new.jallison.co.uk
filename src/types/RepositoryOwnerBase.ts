@@ -1,20 +1,16 @@
-export interface RepositoryOwnerBase
-{
+export interface RepositoryOwnerBase {
   repositoryOwner?: RepositoryOwner;
 }
 
-interface RepositoryOwner
-{
+interface RepositoryOwner {
   repositories?: Repository;
 }
 
-interface Repository
-{
+interface Repository {
   nodes?: RepositoryNode[];
 }
 
-interface RepositoryNode
-{
+interface RepositoryNode {
   name: string;
   url: string;
   stargazerCount: number | undefined;

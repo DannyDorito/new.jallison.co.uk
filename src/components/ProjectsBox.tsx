@@ -1,37 +1,60 @@
-import { ProjectsBoxProps } from "../props/ProjectsBoxProps";
-import SvgStar from "../svgs/Star";
-import SvgShare2 from "../svgs/Share2";
+import { ProjectsBoxProps } from '../props/ProjectsBoxProps';
+import SvgStar from '../svgs/Star';
+import SvgShare2 from '../svgs/Share2';
 import '../scss/components/ProjectsBox.scss';
 
-const ProjectsBox = ( { props }: { props: ProjectsBoxProps } ) =>
-{
+const ProjectsBox = ({ props }: { props: ProjectsBoxProps }) => {
   return (
     <>
-      <div className="projects-box">
-        {props.link ?
-          <p className="projects-paragraph">
-            <a href={props.link} className={props.className} target="_blank" rel="noopener noreferrer">
+      <div className='projects-box'>
+        {props.link ? (
+          <p className='projects-paragraph'>
+            <a
+              href={props.link}
+              className={props.className}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <props.svg />
               {props.text}
             </a>
-          </p> : <p className="projects-paragraph">{props.text}</p>}
-        {props.stargazerCount ?
-          <p className="projects-paragraph">
-            <a href={props.link + "/stargazers"} className={props.className + "stargazers white"} target="_blank" rel="noopener noreferrer">
-            <SvgStar />
-            {props.stargazerCount}
+          </p>
+        ) : (
+          <p className='projects-paragraph'>{props.text}</p>
+        )}
+        {props.stargazerCount ? (
+          <p className='projects-paragraph'>
+            <a
+              href={props.link + '/stargazers'}
+              className={props.className + 'stargazers white'}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <SvgStar />
+              {props.stargazerCount}
             </a>
-          </p> : <></>}
-        {props.forkCount ?
-          <p className="projects-paragraph">
-            <a href={props.link + "/forks"} className={props.className + "forks white"} target="_blank" rel="noopener noreferrer">
+          </p>
+        ) : (
+          <></>
+        )}
+        {props.forkCount ? (
+          <p className='projects-paragraph'>
+            <a
+              href={props.link + '/forks'}
+              className={props.className + 'forks white'}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <SvgShare2 />
               {props.forkCount}
             </a>
-          </p> : <></>}
+          </p>
+        ) : (
+          <></>
+        )}
       </div>
     </>
   );
-}
+};
 
 export default ProjectsBox;

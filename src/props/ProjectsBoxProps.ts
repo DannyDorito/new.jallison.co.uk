@@ -1,8 +1,7 @@
-import { SVGProps } from "react";
-import { BoxWithIconProps } from "./BoxWithIconProps";
+import { SVGProps } from 'react';
+import { BoxWithIconProps } from './BoxWithIconProps';
 
-export class ProjectsBoxProps extends BoxWithIconProps
-{
+export class ProjectsBoxProps extends BoxWithIconProps {
   stargazerCount: number | undefined;
   forkCount: number | undefined;
 
@@ -12,14 +11,9 @@ export class ProjectsBoxProps extends BoxWithIconProps
     link: string | undefined,
     stargazerCount: number | undefined,
     forkCount: number | undefined,
-    className?: string
-  )
-  {
-    super(
-      text,
-      svg,
-      link,
-      className );
+    className?: string,
+  ) {
+    super(text, svg, link, className);
     this.stargazerCount = stargazerCount;
     this.forkCount = forkCount;
   }

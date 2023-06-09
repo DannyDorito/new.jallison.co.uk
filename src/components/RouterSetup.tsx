@@ -1,14 +1,12 @@
 import { Fragment } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useDarkMode } from 'usehooks-ts'
+import { useDarkMode } from 'usehooks-ts';
 import Wrapper from '../pages/Wrapper';
 import NotFound from './NotFound';
 import '../scss/components/RouterSetup.scss';
 
-const RouterSetup = () =>
-{
+const RouterSetup = () => {
   const { isDarkMode } = useDarkMode();
-
 
   return (
     <div className={isDarkMode ? 'pallet-dark' : 'pallet-light'}>

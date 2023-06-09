@@ -7,8 +7,7 @@ import SvgLinkedin from '../svgs/Linkedin';
 import SvgYoutube from '../svgs/Youtube';
 import { SVGProps } from 'react';
 
-export interface SocialData
-{
+export interface SocialData {
   platform: string;
   icon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
   link: string;
@@ -18,36 +17,36 @@ export const socialData: SocialData[] = [
   {
     platform: 'Twitter',
     icon: SvgTwitter,
-    link: 'https://twitter.com/JohnAllis0n'
+    link: 'https://twitter.com/JohnAllis0n',
   },
   {
     platform: 'Email',
     icon: SvgMail,
-    link: 'mailto:contact@jallison.co.uk'
+    link: 'mailto:contact@jallison.co.uk',
   },
   {
     platform: 'GitHub',
     icon: SvgGithub,
-    link: 'https://github.com/DannyDorito'
+    link: 'https://github.com/DannyDorito',
   },
   {
     platform: 'Instagram',
     icon: SvgInstagram,
-    link: 'https://www.instagram.com/johnallis0n'
+    link: 'https://www.instagram.com/johnallis0n',
   },
   {
     platform: 'Resume',
     icon: SvgFileText,
-    link: 'https://docs.google.com/document/d/1zsnem12ZA2wqAPCwe3Y6CJdBgpnC0SpeCacsQYMILMQ/edit?usp=sharing'
+    link: 'https://docs.google.com/document/d/1zsnem12ZA2wqAPCwe3Y6CJdBgpnC0SpeCacsQYMILMQ/edit?usp=sharing',
   },
   {
     platform: 'LinkedIn',
     icon: SvgLinkedin,
-    link: 'https://www.linkedin.com/in/johnallison-'
+    link: 'https://www.linkedin.com/in/johnallison-',
   },
   {
     platform: 'YouTube',
     icon: SvgYoutube,
-    link: 'https://youtube.com/@JohnAllis0n'
-  }
+    link: 'https://youtube.com/@JohnAllis0n',
+  },
 ];

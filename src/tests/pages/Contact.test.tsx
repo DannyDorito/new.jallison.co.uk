@@ -1,32 +1,23 @@
-import { render, screen } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
-import Contact from "../../pages/Contact";
-import { socialData } from "../../data/SocialData";
+import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
+import Contact from '../../pages/Contact';
+import { socialData } from '../../data/SocialData';
 
-describe( "When the page is rendered", () =>
-{
-  it( "should render <Contact /> JSX component", async () =>
-  {
+describe('When the page is rendered', () => {
+  it('should render <Contact /> JSX component', async () => {
     const expectedSocialData = socialData;
     render(
       <MemoryRouter>
         <Contact />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
-    expect(
-      await screen.findByText( "Contact me" )
-    ).toBeInTheDocument();
+    expect(await screen.findByText('Contact me')).toBeInTheDocument();
 
-    expectedSocialData.forEach( async expected =>
-    {
-      expect(
-        await screen.findByText( expected.platform )
-      ).toBeInTheDocument();
+    expectedSocialData.forEach(async (expected) => {
+      expect(await screen.findByText(expected.platform)).toBeInTheDocument();
 
-      expect(
-        await screen.findByText( expected.platform )
-      ).toHaveAttribute( 'href', expected.link );
-    } );
-  } );
-} );
+      expect(await screen.findByText(expected.platform)).toHaveAttribute('href', expected.link);
+    });
+  });
+});
