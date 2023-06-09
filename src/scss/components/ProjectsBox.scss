@@ -1,9 +1,17 @@
 @use '../_Variables.scss' as v;
 @use './BoxWithIcon.scss';
 
-section,
-a,
-p,
-div {
-  color: white;
+.projects-box {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  justify-content: center;
+}
+
+.projects-paragraph {
+  padding-right: 10px;
+}
+
+.projects-paragraph:last-of-type {
+  padding-right: 0;
 }

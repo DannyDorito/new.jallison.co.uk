@@ -3,4 +3,9 @@
 .skill-list {
   flex-direction: column;
   list-style-type: none;
+  width: max-content;
+}
+
+a {
+  color: black;
 }

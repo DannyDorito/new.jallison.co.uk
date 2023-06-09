@@ -31,8 +31,8 @@ const Home = () =>
     return (
       <>
           <h1>John Allison</h1>
-          <h2>{data?.user?.pronouns}</h2>
-          <h2>{data?.user?.bio}</h2>
+          <h2 className='subheading'>{data?.user?.pronouns}</h2>
+          <h2 className='subheading'>{data?.user?.bio}</h2>
       </>
     );
   }

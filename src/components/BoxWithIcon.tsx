@@ -3,12 +3,13 @@ import '../scss/components/BoxWithIcon.scss';
 
 const BoxWithIcon = ( { props }: { props: BoxWithIconProps } ) =>
 {
+  const iconClassName = `${props.className} icon`;
   return (
     <>
       <div className="child">
         {props.link ?
-          <p><a href={props.link} target="_blank" rel="noopener noreferrer">
-            <props.svg className="icon" />{props.text}
+          <p><a href={props.link} target="_blank" rel="noopener noreferrer" className={props.className}>
+            <props.svg className={iconClassName} />{props.text}
           </a>
           </p> : <p>{props.text}</p>}
       </div>

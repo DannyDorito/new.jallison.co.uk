@@ -10,13 +10,15 @@ export class ProjectsBoxProps extends BoxWithIconProps
     svg: any,
     link: string | undefined,
     stargazerCount: number | undefined,
-    forkCount: number | undefined
+    forkCount: number | undefined,
+    className?: string
   )
   {
     super(
       text,
       svg,
-      link );
+      link,
+      className );
     this.stargazerCount = stargazerCount;
     this.forkCount = forkCount;
   }
