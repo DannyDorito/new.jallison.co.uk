@@ -39,7 +39,7 @@ describe('When the page is rendered', () => {
     render(
       <MockedProvider mocks={mocks} addTypename={false}>
         <MemoryRouter>
-          <Projects className='dark' />
+          <Projects />
         </MemoryRouter>
       </MockedProvider>,
     );
