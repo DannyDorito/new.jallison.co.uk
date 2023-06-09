@@ -7,7 +7,7 @@ import '../scss/components/RouterSetup.scss';
 
 const RouterSetup = () =>
 {
-  const { isDarkMode, toggle, enable, disable } = useDarkMode();
+  const { isDarkMode } = useDarkMode();
 
 
   return (

@@ -1,3 +1,4 @@
+import { SVGProps } from "react";
 import { BoxWithIconProps } from "./BoxWithIconProps";
 
 export class ProjectsBoxProps extends BoxWithIconProps
@@ -7,7 +8,7 @@ export class ProjectsBoxProps extends BoxWithIconProps
 
   constructor(
     text: string,
-    svg: any,
+    svg: (props: SVGProps<SVGSVGElement>) => JSX.Element,
     link: string | undefined,
     stargazerCount: number | undefined,
     forkCount: number | undefined,

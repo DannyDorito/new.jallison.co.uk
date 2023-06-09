@@ -1,13 +1,15 @@
+import { SVGProps } from "react";
+
 export class BoxWithIconProps
 {
   text: string;
-  svg: any;
+  svg: (props: SVGProps<SVGSVGElement>) => JSX.Element;
   link: string | undefined;
   className?: string;
 
   constructor(
     text: string,
-    svg: any,
+    svg: (props: SVGProps<SVGSVGElement>) => JSX.Element,
     link: string | undefined,
     className?: string
   )

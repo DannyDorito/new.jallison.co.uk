@@ -2,7 +2,7 @@ import SvgHeartWhite from '../svgs/HeartWhite';
 import SvgHeartBlack from '../svgs/HeartBlack';
 import '../scss/components/Footer.scss';
 
-const Footer = ( { onClick, darkMode }: any ) =>
+const Footer = ( { onClick, darkMode }: { onClick: () => void, darkMode: boolean } ) =>
 {
   return (
     <>

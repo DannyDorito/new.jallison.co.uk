@@ -5,11 +5,12 @@ import SvgInstagram from '../svgs/Instagram';
 import SvgFileText from '../svgs/FileText';
 import SvgLinkedin from '../svgs/Linkedin';
 import SvgYoutube from '../svgs/Youtube';
+import { SVGProps } from 'react';
 
 export interface SocialData
 {
   platform: string;
-  icon: any;
+  icon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
   link: string;
 }
 

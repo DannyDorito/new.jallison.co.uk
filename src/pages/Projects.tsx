@@ -5,7 +5,7 @@ import { ProjectsBoxProps } from '../props/ProjectsBoxProps';
 import ProjectsBox from '../components/ProjectsBox';
 import SvgTerminal from '../svgs/Terminal';
 
-const Projects = ( { className }: { className: string } ) =>
+const Projects = () =>
 {
   const ignoredProjects: string[] = [ 'DannyDorito' ];
   const username = "DannyDorito";
