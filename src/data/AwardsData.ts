@@ -18,15 +18,27 @@ export const awards: Awards[] = [
     key: 'az900',
   },
   {
+    name: 'Microsoft Certified: Azure Data Fundamentals',
+    additionalInformation:
+      'Demonstrated foundational knowledge of core data concepts and how they are implemented using Microsoft Azure data services.',
+    key: 'dp900',
+  },
+  {
+    name: 'Foundations of Git - Certification Course',
+    additionalInformation:
+      'Understand the fundamentals of Git version control.',
+    key: 'git',
+  },
+  {
     name: 'The Ethical IT Professional',
     additionalInformation:
-      'Understanding of ethical practices relevant to working in the IT industry, corporate social responsibility, and ethical safeguarding',
+      'Understanding of ethical practices relevant to working in the IT industry, corporate social responsibility, and ethical safeguarding.',
     key: 'ethical-it',
   },
   {
-    name: 'Android Development',
+    name: 'Getting Started with SpecFlow in Visual Studio',
     additionalInformation:
-      'Advanced Android (Java) development, activity lifecycles and UI design.',
-    key: 'android',
+      'Understanding of Behaviour Driven Development, setup and using SpecFlow to automate tests.',
+    key: 'specflow',
   },
 ];

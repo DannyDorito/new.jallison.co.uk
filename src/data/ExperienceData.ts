@@ -42,7 +42,7 @@ export const experience: Experience[] = [
     startDate: new Date(2019, 9),
     endDate: new Date(2020, 5),
     location: 'Kingston Upon Hull',
-    workFromHome: '',
+    workFromHome: 'Hybrid',
     additionalInformation: [
       'Created a full stack environment for a loan management system, technologies used:',
       'WPF, C# Web API, MySQL, Windows Server Administration, IIS',

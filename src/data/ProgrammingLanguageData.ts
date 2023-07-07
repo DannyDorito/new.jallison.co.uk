@@ -49,7 +49,7 @@ export const javascriptFrameworks: Skills[] = [
   },
   {
     name: 'MUI',
-    proficiency: 2,
+    proficiency: 3,
   },
   {
     name: 'Angular Material',
@@ -57,7 +57,7 @@ export const javascriptFrameworks: Skills[] = [
   },
   {
     name: 'Knockout.js',
-    proficiency: 5,
+    proficiency: 6,
   },
 ];
 
