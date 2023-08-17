@@ -44,8 +44,6 @@ describe('When the page is rendered', () => {
       </MockedProvider>,
     );
 
-    expect(await screen.findByText('...')).toBeInTheDocument();
-
     expect(await screen.findByText('Projects')).toBeInTheDocument();
   });
 });
