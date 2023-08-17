@@ -25,8 +25,7 @@ export const awards: Awards[] = [
   },
   {
     name: 'Foundations of Git - Certification Course',
-    additionalInformation:
-      'Understand the fundamentals of Git version control.',
+    additionalInformation: 'Understand the fundamentals of Git version control.',
     key: 'git',
   },
   {
