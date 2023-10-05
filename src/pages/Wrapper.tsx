@@ -67,7 +67,7 @@ const Wrapper = () => {
         <Resume />
       </section>
 
-      <section className='dark blobs-background' data-testid='section-4'>
+      <section className='dark' data-testid='section-4'>
         <div className='red-curve-top'>
           <svg
             xmlns='https://www.w3.org/2000/svg'
