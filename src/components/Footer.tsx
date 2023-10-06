@@ -8,8 +8,8 @@ const Footer = ({ onClick, darkMode }: { onClick: () => void; darkMode: boolean 
       <div className='footer no-select'>
         <p>
           Made with&nbsp;
-          {darkMode ? <SvgHeartWhite onClick={onClick} /> : <SvgHeartBlack onClick={onClick} />}&nbsp;by
-          John Allison &#0169; {new Date().getFullYear()}
+          {darkMode ? <SvgHeartWhite onClick={onClick} /> : <SvgHeartBlack onClick={onClick} />}
+          &nbsp;by John Allison &#0169; {new Date().getFullYear()}
         </p>
       </div>
     </>

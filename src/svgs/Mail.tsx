@@ -10,8 +10,10 @@ const SvgMail = (props: SVGProps<SVGSVGElement>) => (
     strokeLinecap='round'
     strokeLinejoin='round'
     className='mail_svg__feather mail_svg__feather-mail'
+    aria-labelledby='mailTitle'
     {...props}
   >
+    <title id='mailTitle'>Mail</title>
     <path d='M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z' />
     <path d='m22 6-10 7L2 6' />
   </svg>

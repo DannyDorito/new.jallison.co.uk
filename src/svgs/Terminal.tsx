@@ -10,8 +10,10 @@ const SvgTerminal = (props: SVGProps<SVGSVGElement>) => (
     strokeLinecap='round'
     strokeLinejoin='round'
     className='terminal_svg__feather terminal_svg__feather-terminal'
+    aria-labelledby='terminalTitle'
     {...props}
   >
+    <title id='terminalTitle'>Terminal</title>
     <path d='m4 17 6-6-6-6M12 19h8' />
   </svg>
 );

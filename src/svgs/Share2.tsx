@@ -10,8 +10,10 @@ const SvgShare2 = (props: SVGProps<SVGSVGElement>) => (
     strokeLinecap='round'
     strokeLinejoin='round'
     className='share-2_svg__feather share-2_svg__feather-share-2'
+    aria-labelledby='shareTitle'
     {...props}
   >
+    <title id='shareTitle'>Share</title>
     <circle cx={18} cy={5} r={3} />
     <circle cx={6} cy={12} r={3} />
     <circle cx={18} cy={19} r={3} />
