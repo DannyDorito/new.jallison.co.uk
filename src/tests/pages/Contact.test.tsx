@@ -3,21 +3,36 @@ import { MemoryRouter } from 'react-router-dom';
 import Contact from '../../pages/Contact';
 import { socialData } from '../../data/SocialData';
 
-describe('When the page is rendered', () => {
-  it('should render <Contact /> JSX component', async () => {
-    const expectedSocialData = socialData;
+describe( 'Contact Component', () =>
+{
+  beforeEach( () =>
+  {
     render(
       <MemoryRouter>
         <Contact />
       </MemoryRouter>,
     );
+  } );
 
-    expect(await screen.findByText('Contact me')).toBeInTheDocument();
+  it( 'should render without crashing', () =>
+  {
+    const contactComponent = screen.getByTestId( 'contact-component' );
+    expect( contactComponent ).toBeInTheDocument();
+  } );
 
-    expectedSocialData.forEach(async (expected) => {
-      expect(await screen.findByText(expected.platform)).toBeInTheDocument();
+  it( 'should render the heading', async () =>
+  {
+    const heading = await screen.findByText( 'Contact me' );
+    expect( heading ).toBeInTheDocument();
+  } );
 
-      expect(await screen.findByText(expected.platform)).toHaveAttribute('href', expected.link);
-    });
-  });
-});
+  it( 'should render all social media platforms', async () =>
+  {
+    for ( const social of socialData )
+    {
+      const platformElement = await screen.findByText( social.platform );
+      expect( platformElement ).toBeInTheDocument();
+      expect( platformElement.closest( 'a' ) ).toHaveAttribute( 'href', social.link );
+    }
+  } );
+} );

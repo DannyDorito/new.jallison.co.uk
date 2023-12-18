@@ -7,36 +7,46 @@ import {
   programmingLanguages,
 } from '../../data/ProgrammingLanguageData';
 
-describe('When the page is rendered', () => {
-  it('should render <Skills /> JSX component', async () => {
-    const expectedProgrammingLanguages = programmingLanguages;
-    const expectedJavascriptFrameworks = javascriptFrameworks;
-    const expectedDevOps = devops;
-
+describe('Skills Component', () => {
+  beforeEach(() => {
     render(
       <MemoryRouter>
         <Skills />
       </MemoryRouter>,
     );
+  });
 
+  it('should render Skills title', async () => {
     expect(await screen.findByText('Skills')).toBeInTheDocument();
+  });
 
+  it('should render Programming Languages title', async () => {
     expect(await screen.findByText('Programming Languages')).toBeInTheDocument();
+  });
 
-    expectedProgrammingLanguages.forEach(async (expected) => {
-      expect(await screen.findByText(expected.name)).toBeInTheDocument();
-    });
+  it('should render all programming languages', async () => {
+    for (const language of programmingLanguages) {
+      expect(await screen.findByText(language.name)).toBeInTheDocument();
+    }
+  });
 
+  it('should render Frameworks title', async () => {
     expect(await screen.findByText('Frameworks')).toBeInTheDocument();
+  });
 
-    expectedJavascriptFrameworks.forEach(async (expected) => {
-      expect(await screen.findByText(expected.name)).toBeInTheDocument();
-    });
+  it('should render all javascript frameworks', async () => {
+    for (const framework of javascriptFrameworks) {
+      expect(await screen.findByText(framework.name)).toBeInTheDocument();
+    }
+  });
 
+  it('should render DevOps title', async () => {
     expect(await screen.findByText('DevOps')).toBeInTheDocument();
+  });
 
-    expectedDevOps.forEach(async (expected) => {
-      expect(await screen.findByText(expected.name)).toBeInTheDocument();
-    });
+  it('should render all devops skills', async () => {
+    for (const devopsSkill of devops) {
+      expect(await screen.findByText(devopsSkill.name)).toBeInTheDocument();
+    }
   });
 });

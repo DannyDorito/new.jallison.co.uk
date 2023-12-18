@@ -5,7 +5,7 @@ export const ProficiencyBar = ({ props }: { props: ProficiencyBarProps }) => {
     <div className='proficiency-wrapper'>
       <div>{props.name}</div>
       <div className='proficiency-outer-bar'>
-        <div style={{ width: props.percent * 10 }} className='proficiency-inner-bar'></div>
+        <div style={{ width: props.percent * 10 }} className='proficiency-inner-bar' data-testid='proficiency-inner-bar'></div>
       </div>
     </div>
   );

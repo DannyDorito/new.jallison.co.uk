@@ -3,7 +3,7 @@ import BoxWithIcon from '../components/BoxWithIcon';
 import '../scss/pages/Contact.scss';
 const Contact = () => {
   return (
-    <>
+    <div data-testid="contact-component">
       <h1 className='no-select'>Contact me</h1>
       <div className='parent'>
         {socialData.map((social) => (
@@ -18,7 +18,7 @@ const Contact = () => {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

@@ -4,8 +4,7 @@ import { GetGitHubBio } from '../../gql/GetGitHubBio';
 import { GetGitHubRepos } from '../../gql/GetGitHubRepos';
 import Wrapper from '../../pages/Wrapper';
 
-describe('When the page is initially loaded', () => {
-  it('should render <Wrapper /> JSX component', async () => {
+describe('Wrapper component', () => {
     const mocks: ReadonlyArray<MockedResponse> = [
       {
         request: {
@@ -51,21 +50,36 @@ describe('When the page is initially loaded', () => {
         },
       },
     ];
+    beforeEach(() => {
+      render(
+        <MockedProvider mocks={mocks} addTypename={false}>
+          <Wrapper />
+        </MockedProvider>,
+      );
+    });
 
-    render(
-      <MockedProvider mocks={mocks} addTypename={false}>
-        <Wrapper />
-      </MockedProvider>,
-    );
+    it('renders Home component in section-1', async () => {
+      const section = await screen.findByTestId('section-1');
+      expect(section).toBeInTheDocument();
+    });
 
-    expect(await screen.findByTestId('section-1')).toBeInTheDocument();
+    it('renders Projects component in section-2', async () => {
+      const section = await screen.findByTestId('section-2');
+      expect(section).toBeInTheDocument();
+    });
 
-    expect(await screen.findByTestId('section-2')).toBeInTheDocument();
+    it('renders Resume component in section-3', async () => {
+      const section = await screen.findByTestId('section-3');
+      expect(section).toBeInTheDocument();
+    });
 
-    expect(await screen.findByTestId('section-3')).toBeInTheDocument();
+    it('renders Contact component in section-4', async () => {
+      const section = await screen.findByTestId('section-4');
+      expect(section).toBeInTheDocument();
+    });
 
-    expect(await screen.findByTestId('section-4')).toBeInTheDocument();
-
-    expect(await screen.findByTestId('section-5')).toBeInTheDocument();
+    it('renders Footer component in section-5', async () => {
+      const section = await screen.findByTestId('section-5');
+      expect(section).toBeInTheDocument();
+    });
   });
-});

@@ -14,7 +14,7 @@ const BoxWithIcon = ({ props }: { props: BoxWithIconProps }) => {
               rel='noopener noreferrer'
               className={props.className}
             >
-              <props.svg className={iconClassName} />
+              <props.svg className={iconClassName} data-testid='icon' />
               {props.text}
             </a>
           </p>
