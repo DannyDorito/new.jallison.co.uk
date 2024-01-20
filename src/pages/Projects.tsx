@@ -6,7 +6,7 @@ import ProjectsBox from '../components/ProjectsBox';
 import SvgTerminal from '../svgs/Terminal';
 
 const Projects = () => {
-  const ignoredProjects: string[] = ['DannyDorito'];
+  const ignoredProjects: string[] = ['DannyDorito', 'A3 Antistasi Docs'];
   const username = 'DannyDorito';
   const take = 100;
   const isFork = null;
