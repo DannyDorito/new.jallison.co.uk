@@ -17,7 +17,7 @@
     "react-scripts": "^5.0.1",
     "sass": "^1.72.0",
     "svgo": "^3.2.0",
-    "usehooks-ts": "^3.0.1",
+    "usehooks-ts": "^3.0.2",
     "web-vitals": "^3.5.2"
   },
   "devDependencies": {
