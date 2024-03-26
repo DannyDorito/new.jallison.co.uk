@@ -1,8 +1,8 @@
-import { useEffectOnce } from 'usehooks-ts';
+import { useEffect } from 'react';
 import '../scss/pages/Wrapper.scss';
 
 const Redirect = ({ link, platform }: { link: string; platform: string }) => {
-  useEffectOnce(() => {
+  useEffect(() => {
     window.location.href = link;
   });
 
