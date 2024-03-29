@@ -1,14 +1,13 @@
 import SvgHeartWhite from '../svgs/HeartWhite';
-import SvgHeartBlack from '../svgs/HeartBlack';
 import '../scss/components/Footer.scss';
 
-const Footer = ({ onClick, darkMode }: { onClick: () => void; darkMode: boolean }) => {
+const Footer = () => {
   return (
     <>
       <div className='footer no-select'>
         <p>
           Made with&nbsp;
-          {darkMode ? <SvgHeartWhite onClick={onClick} data-testid="heart-icon"/> : <SvgHeartBlack onClick={onClick} />}
+          <SvgHeartWhite data-testid="heart-icon"/>
           &nbsp;by John Allison &#0169; {new Date().getFullYear()}
         </p>
       </div>

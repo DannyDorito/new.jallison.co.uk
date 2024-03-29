@@ -1,5 +1,4 @@
 import Footer from '../components/Footer';
-import { useDarkMode } from 'usehooks-ts';
 import Contact from './Contact';
 import Home from './Home';
 import Projects from './Projects';
@@ -7,8 +6,6 @@ import Resume from './Resume';
 import '../scss/pages/Wrapper.scss';
 
 const Wrapper = () => {
-  const { isDarkMode, toggle } = useDarkMode();
-
   return (
     <>
       <section className='blue' data-testid='section-1'>
@@ -94,7 +91,7 @@ const Wrapper = () => {
       </section>
 
       <section className='dark' data-testid='section-5'>
-        <Footer onClick={toggle} darkMode={isDarkMode} />
+        <Footer/>
       </section>
     </>
   );

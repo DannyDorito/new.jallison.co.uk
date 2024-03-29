@@ -1,6 +1,5 @@
 import { Fragment } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useDarkMode } from 'usehooks-ts';
 import Wrapper from '../pages/Wrapper';
 import NotFound from './NotFound';
 import '../scss/components/RouterSetup.scss';
@@ -8,10 +7,9 @@ import { socialData } from '../data/SocialData';
 import Redirect from '../pages/Redirect';
 
 const RouterSetup = () => {
-  const { isDarkMode } = useDarkMode();
   const redirects = socialData.filter((sd) => sd.path !== undefined);
   return (
-    <div className={isDarkMode ? 'pallet-dark' : 'pallet-light'}>
+    <div>
       <Router>
         <Fragment>
           <Routes>
