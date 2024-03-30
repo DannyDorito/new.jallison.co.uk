@@ -44,6 +44,7 @@ const Projects = () => {
                     item?.url,
                     item?.stargazerCount,
                     item?.forkCount,
+                    item?.watchers,
                     'white',
                   )
                 }

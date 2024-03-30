@@ -15,4 +15,9 @@ interface RepositoryNode {
   url: string;
   stargazerCount: number | undefined;
   forkCount: number | undefined;
+  watchers: Watchers;
+}
+
+export interface Watchers {
+  totalCount: number;
 }

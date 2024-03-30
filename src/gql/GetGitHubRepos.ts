@@ -14,6 +14,9 @@ export const GetGitHubRepos = gql`
           url
           stargazerCount
           forkCount
+          watchers(first: 1) {
+            totalCount
+          }
         }
       }
     }

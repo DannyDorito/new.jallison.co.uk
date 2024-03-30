@@ -9,7 +9,8 @@ describe('ProjectsBox', () => {
     svg: () => <div>SVG</div>,
     text: 'Test text',
     stargazerCount: 10,
-    forkCount: 5
+    forkCount: 5,
+    watchers: { totalCount: 10 }
   };
 
   it('renders without crashing', () => {

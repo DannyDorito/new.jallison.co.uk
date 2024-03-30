@@ -1,9 +1,11 @@
 import { ProjectsBoxProps } from '../props/ProjectsBoxProps';
 import SvgStar from '../svgs/Star';
 import SvgShare2 from '../svgs/Share2';
+import SvgEye from '../svgs/Eye';
 import '../scss/components/ProjectsBox.scss';
 
-const ProjectsBox = ({ props }: { props: ProjectsBoxProps }) => {
+const ProjectsBox = ( { props }: { props: ProjectsBoxProps } ) =>
+{
   return (
     <>
       <div className='projects-box'>
@@ -47,6 +49,21 @@ const ProjectsBox = ({ props }: { props: ProjectsBoxProps }) => {
             >
               <SvgShare2 />
               {props.forkCount}
+            </a>
+          </p>
+        ) : (
+          <></>
+        )}
+        {props.watchers.totalCount ? (
+          <p className='projects-paragraph'>
+            <a
+              href={props.link + '/watchers'}
+              className={props.className + 'watchers white'}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <SvgEye />
+              {props.watchers.totalCount}
             </a>
           </p>
         ) : (

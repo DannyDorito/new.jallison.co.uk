@@ -43,6 +43,7 @@ describe('When the page is initially loaded', () => {
                     url: 'https://example.com',
                     stargazerCount: 1,
                     forkCount: 1,
+                    watchers: { totalCount: 10 }
                   },
                 ],
               },
