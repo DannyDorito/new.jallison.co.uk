@@ -42,6 +42,7 @@ describe('Wrapper component', () => {
                     url: 'https://example.com',
                     stargazerCount: 1,
                     forkCount: 1,
+                    watchers: { totalCount: 10 }
                   },
                 ],
               },

@@ -36,6 +36,12 @@ describe('ProjectsBox', () => {
     expect(forkElement).toBeInTheDocument();
   });
 
+  it('renders the watchers count correctly', () => {
+    render(<ProjectsBox props={defaultProps} />);
+    const watchersElement = screen.getByText(defaultProps.watchers.totalCount?.toString() || '');
+    expect(watchersElement).toBeInTheDocument();
+  });
+
   it('does not render stargazer count when it is not provided', () => {
     const props = { ...defaultProps, stargazerCount: undefined };
     render(<ProjectsBox props={props} />);
@@ -46,5 +52,11 @@ describe('ProjectsBox', () => {
     const props = { ...defaultProps, forkCount: undefined };
     render(<ProjectsBox props={props} />);
     expect(screen.queryByText(/forks/i)).not.toBeInTheDocument();
+  });
+
+  it('does not render watchers count when it is not provided', () => {
+    const props = { ...defaultProps, watchers: undefined };
+    render(<ProjectsBox props={props} />);
+    expect(screen.queryByText(/watchers/i)).not.toBeInTheDocument();
   });
 });

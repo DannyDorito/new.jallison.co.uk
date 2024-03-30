@@ -5,7 +5,7 @@ import { Watchers } from '../types/RepositoryOwnerBase';
 export class ProjectsBoxProps extends BoxWithIconProps {
   stargazerCount: number | undefined;
   forkCount: number | undefined;
-  watchers: Watchers;
+  watchers: Watchers | undefined;
 
   constructor(
     text: string,
@@ -13,7 +13,7 @@ export class ProjectsBoxProps extends BoxWithIconProps {
     link: string | undefined,
     stargazerCount: number | undefined,
     forkCount: number | undefined,
-    watchers: Watchers,
+    watchers: Watchers | undefined,
     className?: string,
   ) {
     super(text, svg, link, className);

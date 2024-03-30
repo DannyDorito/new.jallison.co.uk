@@ -54,7 +54,7 @@ const ProjectsBox = ( { props }: { props: ProjectsBoxProps } ) =>
         ) : (
           <></>
         )}
-        {props.watchers.totalCount ? (
+        {props.watchers?.totalCount ? (
           <p className='projects-paragraph'>
             <a
               href={props.link + '/watchers'}
@@ -63,7 +63,7 @@ const ProjectsBox = ( { props }: { props: ProjectsBoxProps } ) =>
               rel='noopener noreferrer'
             >
               <SvgEye />
-              {props.watchers.totalCount}
+              {props.watchers?.totalCount}
             </a>
           </p>
         ) : (
