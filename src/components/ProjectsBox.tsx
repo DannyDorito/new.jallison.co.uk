@@ -28,7 +28,7 @@ const ProjectsBox = ( { props }: { props: ProjectsBoxProps } ) =>
           <p className='projects-paragraph'>
             <a
               href={props.link + '/stargazers'}
-              className={props.className + 'stargazers white'}
+              className={props.className + ' stargazers white'}
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -43,7 +43,7 @@ const ProjectsBox = ( { props }: { props: ProjectsBoxProps } ) =>
           <p className='projects-paragraph'>
             <a
               href={props.link + '/forks'}
-              className={props.className + 'forks white'}
+              className={props.className + ' forks white'}
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -58,7 +58,7 @@ const ProjectsBox = ( { props }: { props: ProjectsBoxProps } ) =>
           <p className='projects-paragraph'>
             <a
               href={props.link + '/watchers'}
-              className={props.className + 'watchers white'}
+              className={props.className + ' watchers white'}
               target='_blank'
               rel='noopener noreferrer'
             >

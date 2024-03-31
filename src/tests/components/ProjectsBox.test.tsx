@@ -10,7 +10,7 @@ describe('ProjectsBox', () => {
     text: 'Test text',
     stargazerCount: 10,
     forkCount: 5,
-    watchers: { totalCount: 10 }
+    watchers: { totalCount: 15 }
   };
 
   it('renders without crashing', () => {
@@ -38,7 +38,7 @@ describe('ProjectsBox', () => {
 
   it('renders the watchers count correctly', () => {
     render(<ProjectsBox props={defaultProps} />);
-    const watchersElement = screen.getByText(defaultProps.watchers.totalCount?.toString() || '');
+    const watchersElement = screen.getByText(defaultProps.watchers?.totalCount?.toString() || '');
     expect(watchersElement).toBeInTheDocument();
   });
 
