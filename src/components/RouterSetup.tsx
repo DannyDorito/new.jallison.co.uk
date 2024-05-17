@@ -6,8 +6,9 @@ import '../scss/components/RouterSetup.scss';
 import { socialData } from '../data/SocialData';
 import Redirect from '../pages/Redirect';
 
-const RouterSetup = () => {
-  const redirects = socialData.filter((sd) => sd.path !== undefined);
+const RouterSetup = () =>
+{
+  const redirects = socialData.filter( ( sd ) => sd.redirect !== undefined );
   return (
     <div>
       <Router>
@@ -15,13 +16,13 @@ const RouterSetup = () => {
           <Routes>
             {/* Adding a route, also add to Nav.tsx and sitemap.xml */}
             <Route path='/' element={<Wrapper />} />
-            {redirects.map((redirect) => (
+            {redirects.map( ( redirect ) => (
               <Route
-                path={redirect.path}
+                path={redirect.redirect}
                 element={<Redirect link={redirect.link} platform={redirect.platform} />}
                 key={redirect.platform}
               />
-            ))}
+            ) )}
             <Route path='*' element={<NotFound />} />
           </Routes>
         </Fragment>

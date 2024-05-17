@@ -1,3 +1,4 @@
+export { default as Code } from './Code';
 export { default as Eye } from './Eye';
 export { default as FileText } from './FileText';
 export { default as Github } from './Github';
