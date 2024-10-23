@@ -5,7 +5,7 @@ export interface Skills {
 
 export const programmingLanguages: Skills[] = [
   {
-    name: 'C# and .Net',
+    name: 'C# and .Net&nbsp;',
     proficiency: 8,
   },
   {
@@ -57,7 +57,11 @@ export const javascriptFrameworks: Skills[] = [
   },
   {
     name: 'Knockout.js',
-    proficiency: 6,
+    proficiency: 7,
+  },
+  {
+    name: 'Next.js',
+    proficiency: 3,
   },
 ];
 
@@ -76,6 +80,6 @@ export const devops: Skills[] = [
   },
   {
     name: 'Git',
-    proficiency: 6,
+    proficiency: 8,
   },
 ];
