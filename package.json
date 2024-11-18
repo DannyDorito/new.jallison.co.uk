@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@svgr/cli": "^8.1.0",
-    "@tsconfig/recommended": "^1.0.7",
+    "@tsconfig/recommended": "^1.0.8",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.9.0",
     "@types/react": "^18.3.12",
